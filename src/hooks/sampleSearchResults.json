@@ -1,0 +1,989 @@
+{
+  "data": [
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15602214,
+        "advertiser": {
+          "type": "Agency",
+          "id": 4394,
+          "name": "Jellis Craig Inner North Property Management",
+          "logoUrl": "https://images.domain.com.au/img/Agencys/4394/logo_4394.png",
+          "preferredColourHex": "#1c252e",
+          "bannerUrl": "https://images.domain.com.au/img/Agencys/4394/banner_4394.png",
+          "contacts": [
+            {
+              "name": "Helena Eglezos",
+              "photoUrl": "https://images.domain.com.au/img/4394/contact_1778373.jpeg?mod=211215-163644"
+            },
+            {
+              "name": "Inner North Property Management",
+              "photoUrl": "https://images.domain.com.au/img/4394/contact_1334924.jpeg?mod=211215-164649"
+            }
+          ]
+        },
+        "priceDetails": {
+          "price": 670,
+          "priceFrom": 670,
+          "priceTo": 670,
+          "displayPrice": "$670.00"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602214_1_1_211215_053644-w2560-h1707"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15480599_2_1_211026_122339-w3333-h2308"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602214_3_1_211215_053644-w2560-h1707"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602214_4_1_211215_053644-w2560-h1707"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602214_5_1_211215_053644-w2560-h1707"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "BuiltInWardrobes",
+            "Floorboards",
+            "Gas",
+            "SecureParking",
+            "Heating",
+            "Dishwasher",
+            "BalconyDeck"
+          ],
+          "propertyType": "Townhouse",
+          "allPropertyTypes": [
+            "Townhouse"
+          ],
+          "bathrooms": 2,
+          "bedrooms": 2,
+          "carspaces": 2,
+          "unitNumber": "",
+          "streetNumber": "33",
+          "street": "Warne Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "33 Warne Street, Brunswick",
+          "latitude": -37.75931,
+          "longitude": 144.956772
+        },
+        "headline": "Idealistic Floorplan",
+        "summaryDescription": "<b></b><br />The winning space of this property really is the upper level, with an enormous and versatile living/entertainment zone, separate and formal meals area, and well-equipped kitchen  complete with island bench and only the best fittings and fi...",
+        "hasFloorplan": false,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": false,
+          "recurring": false,
+          "times": [
+            {
+              "openingTime": "2021-12-21T16:30:00",
+              "closingTime": "2021-12-21T16:45:00"
+            }
+          ]
+        },
+        "listingSlug": "33-warne-street-brunswick-vic-3056-15602214"
+      }
+    },
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15602184,
+        "advertiser": {
+          "type": "Agency",
+          "id": 7914,
+          "name": "ASL Real Estate",
+          "logoUrl": "https://images.domain.com.au/img/Agencys/7914/logo_7914.jpg?date=131632133639935044",
+          "preferredColourHex": "#182E45",
+          "bannerUrl": "https://images.domain.com.au/img/Agencys/7914/banner_7914.jpg?date=131632133605092329",
+          "contacts": [
+            {
+              "name": "Ellis George"
+            }
+          ]
+        },
+        "priceDetails": {
+          "displayPrice": "$350 per week"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602184_1_1_211215_052906-w3000-h2000"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602184_2_1_211215_052906-w3000-h2000"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602184_3_1_211215_052906-w3000-h2000"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602184_4_1_211215_052906-w3000-h2000"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602184_5_1_211215_052906-w4032-h3024"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "InternalLaundry",
+            "CityViews"
+          ],
+          "propertyType": "ApartmentUnitFlat",
+          "allPropertyTypes": [
+            "ApartmentUnitFlat"
+          ],
+          "bathrooms": 1,
+          "bedrooms": 1,
+          "carspaces": 1,
+          "unitNumber": "4",
+          "streetNumber": "114",
+          "street": "Blyth Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "4/114 Blyth Street, Brunswick",
+          "latitude": -37.76682,
+          "longitude": 144.971146
+        },
+        "headline": "AAA BRUNSWICK APARTMENT - JUST RENOVATED",
+        "summaryDescription": "<b></b><br />Available for lease is this huge 1-bedroom apartment in the heart of Brunswick - this fantastic opportunity will not last long!\n\nThis apartment has just been renovated - A fresh coat paint throughout, beautiful new slate coloured carpets, ...",
+        "hasFloorplan": false,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": false,
+          "recurring": false,
+          "times": [
+            {
+              "openingTime": "2021-12-16T15:25:00",
+              "closingTime": "2021-12-16T15:40:00"
+            },
+            {
+              "openingTime": "2021-12-18T10:50:00",
+              "closingTime": "2021-12-18T11:05:00"
+            }
+          ]
+        },
+        "listingSlug": "4-114-blyth-street-brunswick-vic-3056-15602184"
+      }
+    },
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15601896,
+        "advertiser": {
+          "type": "Agency",
+          "id": 35595,
+          "name": "Pathway Asset Management",
+          "preferredColourHex": "#DDDDDD",
+          "contacts": [
+            {
+              "name": "Amy Fiske"
+            }
+          ]
+        },
+        "priceDetails": {
+          "displayPrice": "$980 per week"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15601896_1_1_211215_042440-w4500-h3000"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15601896_2_1_211215_042440-w4500-h3000"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15601896_3_1_211215_042440-w4500-h3000"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15601896_4_1_211215_042440-w3000-h4500"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15601896_5_1_211215_042440-w4500-h3000"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "AirConditioning",
+            "Floorboards",
+            "Gas",
+            "PetsAllowed",
+            "SecureParking",
+            "SwimmingPool",
+            "Heating",
+            "Dishwasher",
+            "Shed",
+            "FullyFenced",
+            "SolarPanels"
+          ],
+          "propertyType": "House",
+          "allPropertyTypes": [
+            "House"
+          ],
+          "bathrooms": 2,
+          "bedrooms": 3,
+          "carspaces": 1,
+          "unitNumber": "",
+          "streetNumber": "42",
+          "street": "Rose Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "42 Rose Street, Brunswick",
+          "latitude": -37.75698,
+          "longitude": 144.9526
+        },
+        "headline": "Contemporary Edwardian On City's Fringe",
+        "summaryDescription": "<b></b><br />Superbly renovated this three bedroom, two bathroom elevated Edwardian home radiates sophistication, where modern and traditional elements meet. Boasting a meticulous renovation, offering contemporary open plan living and seamless indoor/ ...",
+        "hasFloorplan": true,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": false,
+          "recurring": false,
+          "times": [
+            {
+              "openingTime": "2021-12-18T10:30:00",
+              "closingTime": "2021-12-18T10:45:00"
+            }
+          ]
+        },
+        "listingSlug": "42-rose-street-brunswick-vic-3056-15601896"
+      }
+    },
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15599262,
+        "advertiser": {
+          "type": "Agency",
+          "id": 4394,
+          "name": "Jellis Craig Inner North Property Management",
+          "logoUrl": "https://images.domain.com.au/img/Agencys/4394/logo_4394.png",
+          "preferredColourHex": "#1c252e",
+          "bannerUrl": "https://images.domain.com.au/img/Agencys/4394/banner_4394.png",
+          "contacts": [
+            {
+              "name": "Helena Eglezos",
+              "photoUrl": "https://images.domain.com.au/img/4394/contact_1778373.jpeg?mod=211214-151113"
+            },
+            {
+              "name": "Elliott  Heslop",
+              "photoUrl": "https://images.domain.com.au/img/4394/contact_1651831.jpeg?mod=211214-151113"
+            },
+            {
+              "name": "Inner North Property Management",
+              "photoUrl": "https://images.domain.com.au/img/4394/contact_1334924.jpeg?mod=211214-151631"
+            }
+          ]
+        },
+        "priceDetails": {
+          "price": 420,
+          "priceFrom": 420,
+          "priceTo": 420,
+          "displayPrice": "$420.00"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15599262_1_1_211214_041113-w8256-h5504"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15480599_2_1_211026_122339-w3333-h2308"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15599262_3_1_211214_041113-w1000-h667"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15599262_4_1_211214_041113-w1000-h667"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15599262_5_1_211214_041113-w8256-h5504"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "BuiltInWardrobes",
+            "Floorboards",
+            "SecureParking",
+            "Intercom",
+            "Heating",
+            "Dishwasher",
+            "GardenCourtyard"
+          ],
+          "propertyType": "ApartmentUnitFlat",
+          "allPropertyTypes": [
+            "ApartmentUnitFlat"
+          ],
+          "bathrooms": 1,
+          "bedrooms": 2,
+          "carspaces": 1,
+          "unitNumber": "108",
+          "streetNumber": "8-38",
+          "street": "Percy Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "108/8-38 Percy Street, Brunswick",
+          "latitude": -37.7653465,
+          "longitude": 144.958786
+        },
+        "headline": "Lifestyle Central",
+        "summaryDescription": "<b></b><br />A casual stroll to buzzing Sydney Road, trains, trams, and parks, this contemporary two-bedroom apartment boasts two individual outdoor spaces and embodies liberating modern living in a vibrant locale. The social hub of the home is an open...",
+        "hasFloorplan": false,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": true,
+          "recurring": false,
+          "times": []
+        },
+        "listingSlug": "108-8-38-percy-street-brunswick-vic-3056-15599262"
+      }
+    },
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15598141,
+        "advertiser": {
+          "type": "Agency",
+          "id": 4394,
+          "name": "Jellis Craig Inner North Property Management",
+          "logoUrl": "https://images.domain.com.au/img/Agencys/4394/logo_4394.png",
+          "preferredColourHex": "#1c252e",
+          "bannerUrl": "https://images.domain.com.au/img/Agencys/4394/banner_4394.png",
+          "contacts": [
+            {
+              "name": "Helena Eglezos",
+              "photoUrl": "https://images.domain.com.au/img/4394/contact_1778373.jpeg?mod=211214-115913"
+            },
+            {
+              "name": "Inner North Property Management",
+              "photoUrl": "https://images.domain.com.au/img/4394/contact_1334924.jpeg?mod=211214-115913"
+            }
+          ]
+        },
+        "priceDetails": {
+          "price": 420,
+          "priceFrom": 420,
+          "priceTo": 420,
+          "displayPrice": "$420.00"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/14501359_3_1_200901_052952-w1641-h1080"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15480599_2_1_211026_122339-w3333-h2308"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/14501359_4_1_200901_052952-w1664-h1080"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/14501359_5_1_200901_052952-w1620-h1080"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/14501359_6_1_200901_052952-w1653-h1080"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "BuiltInWardrobes",
+            "Floorboards",
+            "SecureParking",
+            "Heating",
+            "Dishwasher",
+            "BalconyDeck"
+          ],
+          "propertyType": "ApartmentUnitFlat",
+          "allPropertyTypes": [
+            "ApartmentUnitFlat"
+          ],
+          "bathrooms": 1,
+          "bedrooms": 2,
+          "carspaces": 1,
+          "unitNumber": "306",
+          "streetNumber": "33-35",
+          "street": "Breese Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "306/33-35 Breese Street, Brunswick",
+          "latitude": -37.76239,
+          "longitude": 144.961334
+        },
+        "headline": "Two-Bedroom Apartment",
+        "summaryDescription": "<b></b><br />The modern apartment features two bedrooms with built-in robes, a modern kitchen with dishwasher and quality appliances, flowing onto the open plan dining and living areas. Further features include a spacious balcony, split system heating/...",
+        "hasFloorplan": false,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": true,
+          "recurring": false,
+          "times": []
+        },
+        "listingSlug": "306-33-35-breese-street-brunswick-vic-3056-15598141"
+      }
+    },
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15597719,
+        "advertiser": {
+          "type": "Agency",
+          "id": 4394,
+          "name": "Jellis Craig Inner North Property Management",
+          "logoUrl": "https://images.domain.com.au/img/Agencys/4394/logo_4394.png",
+          "preferredColourHex": "#1c252e",
+          "bannerUrl": "https://images.domain.com.au/img/Agencys/4394/banner_4394.png",
+          "contacts": [
+            {
+              "name": "Helena Eglezos",
+              "photoUrl": "https://images.domain.com.au/img/4394/contact_1778373.jpeg?mod=211215-171020"
+            },
+            {
+              "name": "Inner North Property Management",
+              "photoUrl": "https://images.domain.com.au/img/4394/contact_1334924.jpeg?mod=211215-222814"
+            }
+          ]
+        },
+        "priceDetails": {
+          "price": 660,
+          "priceFrom": 660,
+          "priceTo": 660,
+          "displayPrice": "$660.00"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/14127565_2_1_200330_112301-w8256-h5504"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15480599_2_1_211026_122339-w3333-h2308"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/14127565_3_1_200330_112301-w8256-h5504"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/14127565_5_1_200330_112301-w8256-h5504"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/14127565_4_1_200330_112301-w8256-h5504"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "BuiltInWardrobes",
+            "Ensuite",
+            "Gas",
+            "Heating",
+            "Dishwasher"
+          ],
+          "propertyType": "Terrace",
+          "allPropertyTypes": [
+            "Terrace"
+          ],
+          "bathrooms": 2,
+          "bedrooms": 3,
+          "unitNumber": "",
+          "streetNumber": "70",
+          "street": "Henkel Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "70 Henkel Street, Brunswick",
+          "latitude": -37.7652664,
+          "longitude": 144.956451
+        },
+        "headline": "Two Level Loft Style Terrace House",
+        "summaryDescription": "<b></b><br />Two-level loft-style terrace house with lower floor comprises of lounge room overlooking a private courtyard, leading into a kitchen with gas cooking appliances and dishwasher, connecting to a second living space/meals area, two large bedr...",
+        "hasFloorplan": false,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": false,
+          "recurring": false,
+          "times": []
+        },
+        "listingSlug": "70-henkel-street-brunswick-vic-3056-15597719"
+      }
+    },
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15594878,
+        "advertiser": {
+          "type": "Agency",
+          "id": 3702,
+          "name": "Belle Property Albert Park",
+          "logoUrl": "https://images.domain.com.au/img/Agencys/3702/logo_3702.png?date=132247312350812957",
+          "preferredColourHex": "#386351",
+          "bannerUrl": "https://images.domain.com.au/img/Agencys/3702/banner_3702.png?date=132247312444877882",
+          "contacts": [
+            {
+              "name": "Bashar Barhoun",
+              "photoUrl": "https://images.domain.com.au/img/3702/contact_1807585.jpeg?mod=211213-093049"
+            }
+          ]
+        },
+        "priceDetails": {
+          "displayPrice": "$450 per week"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594878_1_1_211212_103049-w800-h600"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594878_2_1_211212_103049-w800-h600"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594878_3_1_211212_103049-w800-h600"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594878_4_1_211212_103049-w800-h600"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594878_5_1_211212_103049-w800-h533"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "AirConditioning",
+            "BuiltInWardrobes",
+            "Gas",
+            "SecureParking",
+            "Intercom",
+            "Heating",
+            "Dishwasher"
+          ],
+          "propertyType": "ApartmentUnitFlat",
+          "allPropertyTypes": [
+            "ApartmentUnitFlat"
+          ],
+          "bathrooms": 1,
+          "bedrooms": 2,
+          "carspaces": 1,
+          "unitNumber": "404",
+          "streetNumber": "20",
+          "street": "Breese Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "404/20 Breese Street, Brunswick",
+          "latitude": -37.7629929,
+          "longitude": 144.961639
+        },
+        "headline": "Action packed full of value!",
+        "summaryDescription": "<b></b><br />Step inside this modern two bedroom apartment to be truly impressed. Located just off bustling Sydney Rd between Hope & Albion Streets, this apartment provides easy tram access to the CBD, local shopping, hospitals & universities. With its...",
+        "hasFloorplan": false,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": true,
+          "recurring": false,
+          "times": []
+        },
+        "listingSlug": "404-20-breese-street-brunswick-vic-3056-15594878"
+      }
+    },
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15594527,
+        "advertiser": {
+          "type": "Agency",
+          "id": 3915,
+          "name": "Hodges Real Estate Brighton",
+          "logoUrl": "https://images.domain.com.au/img/Agencys/3915/logo_3915.png?date=131072332802413365",
+          "preferredColourHex": "#343741",
+          "bannerUrl": "https://images.domain.com.au/img/Agencys/3915/banner_3915.png?date=131072333001163471",
+          "contacts": [
+            {
+              "name": "Carolyn Stephens",
+              "photoUrl": "https://images.domain.com.au/img/3915/contact_1746214.jpeg?mod=211215-154816"
+            }
+          ]
+        },
+        "priceDetails": {
+          "price": 450,
+          "priceFrom": 450,
+          "priceTo": 450,
+          "displayPrice": "$450.00"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594527_1_1_211212_072727-w4032-h3024"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594527_2_1_211212_072727-w827-h601"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594527_3_1_211212_072727-w821-h577"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594527_4_1_211212_072727-w827-h598"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15594527_5_1_211212_072727-w819-h601"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "BuiltInWardrobes",
+            "Floorboards",
+            "Intercom",
+            "Dishwasher",
+            "FullyFenced"
+          ],
+          "propertyType": "ApartmentUnitFlat",
+          "allPropertyTypes": [
+            "ApartmentUnitFlat"
+          ],
+          "bathrooms": 1,
+          "bedrooms": 2,
+          "carspaces": 1,
+          "unitNumber": "1",
+          "streetNumber": "37",
+          "street": "Staley Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "1/37 Staley Street, Brunswick",
+          "latitude": -37.76409,
+          "longitude": 144.9639
+        },
+        "headline": "INNER URBAN LIFESTYLE AT ITS BEST",
+        "summaryDescription": "<b></b><br />This lovely 2 bedroom 1 bathroom apartment has all you need to live the Brunswick lifestyle.\r\n\r\nFeatures:\r\n\r\n2 bedrooms are generously sized with built in robes.\r\n\r\nSparkling bathroom with all modern fittings and fixtures.\r\n\r\nKitchen with ...",
+        "hasFloorplan": false,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": false,
+          "recurring": false,
+          "times": []
+        },
+        "listingSlug": "1-37-staley-street-brunswick-vic-3056-15594527"
+      }
+    },
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15593009,
+        "advertiser": {
+          "type": "Agency",
+          "id": 21490,
+          "name": "Ray White Brunswick",
+          "logoUrl": "https://images.domain.com.au/img/Agencys/21490/logo_21490.png?date=131378336667024819",
+          "preferredColourHex": "#FEE536",
+          "bannerUrl": "https://images.domain.com.au/img/Agencys/21490/banner_21490.png?date=131378336997493939",
+          "contacts": [
+            {
+              "name": "Hassan Allouche"
+            },
+            {
+              "name": "Richard Conti"
+            }
+          ]
+        },
+        "priceDetails": {
+          "price": 625,
+          "priceFrom": 625,
+          "priceTo": 625,
+          "displayPrice": "$625"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15593009_1_1_211210_052955-w1920-h1281"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15104391_2_1_210506_040114-w6912-h4884"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15593009_3_1_211210_052955-w1920-h1281"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15593009_4_1_211210_052955-w1920-h1281"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/15593009_5_1_211210_052955-w1920-h1280"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "Floorboards",
+            "Heating"
+          ],
+          "propertyType": "Townhouse",
+          "allPropertyTypes": [
+            "Townhouse"
+          ],
+          "bathrooms": 3,
+          "bedrooms": 3,
+          "carspaces": 1,
+          "unitNumber": "1",
+          "streetNumber": "10",
+          "street": "Collace Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "1/10 Collace Street, Brunswick",
+          "latitude": -37.76722,
+          "longitude": 144.971558
+        },
+        "headline": "Stylish Townhouse Living!",
+        "summaryDescription": "<b></b><br />With its own street frontage and conveniently located with all amenities on your doorstep, close to public transport (tram routes 1 & 6 and bus route 508), Barkly Square, Fleming Park; and set amidst some of Melbourne's best cafes and rest...",
+        "hasFloorplan": true,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": true,
+          "recurring": false,
+          "times": []
+        },
+        "listingSlug": "1-10-collace-street-brunswick-vic-3056-15593009"
+      }
+    },
+    {
+      "type": "PropertyListing",
+      "listing": {
+        "listingType": "Rent",
+        "id": 15591828,
+        "advertiser": {
+          "type": "Agency",
+          "id": 23545,
+          "name": "Grantham Real Estate",
+          "logoUrl": "https://images.domain.com.au/img/Agencys/23545/logo_23545.png",
+          "preferredColourHex": "#e53e46",
+          "bannerUrl": "https://images.domain.com.au/img/Agencys/23545/banner_23545.png",
+          "contacts": [
+            {
+              "name": "Grantham Real Estate"
+            }
+          ]
+        },
+        "priceDetails": {
+          "displayPrice": "$360"
+        },
+        "media": [
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/w800-h534-10408723_1_pi_160303_123659"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/w1500-h1001-10408723_2_pi_160307_081917"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/w800-h534-10408723_3_pi_160303_123659"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/w800-h534-10408723_4_pi_160303_123659"
+          },
+          {
+            "category": "Image",
+            "url": "https://bucket-api.domain.com.au/v1/bucket/image/w800-h534-10408723_5_pi_160303_123700"
+          }
+        ],
+        "propertyDetails": {
+          "state": "VIC",
+          "features": [
+            "AirConditioning",
+            "BuiltInWardrobes",
+            "Floorboards",
+            "SecureParking",
+            "Intercom",
+            "Heating",
+            "Dishwasher",
+            "FullyFenced"
+          ],
+          "propertyType": "ApartmentUnitFlat",
+          "allPropertyTypes": [
+            "ApartmentUnitFlat"
+          ],
+          "bathrooms": 1,
+          "bedrooms": 1,
+          "carspaces": 1,
+          "unitNumber": "3",
+          "streetNumber": "72",
+          "street": "Dawson Street",
+          "area": "Moreland City Council - Greater Area",
+          "region": "Melbourne Region",
+          "suburb": "BRUNSWICK",
+          "postcode": "3056",
+          "displayableAddress": "3/72 Dawson Street, Brunswick",
+          "latitude": -37.7705536,
+          "longitude": 144.954391
+        },
+        "headline": "GREat Rental",
+        "summaryDescription": "<b></b><br />Fabulous apartment in the heart of Brunswick. Great for entertaining and enjoying the simpler things in life. \n- Light and bright\n- Great open plan living\n- Entertainers patio ideal for BBQ and outdoor living\n- Internal Euro laundry\n- Heat...",
+        "hasFloorplan": false,
+        "hasVideo": false,
+        "labels": [
+          "New"
+        ],
+        "inspectionSchedule": {
+          "byAppointment": false,
+          "recurring": false,
+          "times": [
+            {
+              "openingTime": "2021-12-18T10:00:00",
+              "closingTime": "2021-12-18T10:10:00"
+            }
+          ]
+        },
+        "listingSlug": "3-72-dawson-street-brunswick-vic-3056-15591828"
+      }
+    }
+  ],
+  "status": 200,
+  "statusText": "OK",
+  "headers": {
+    "access-control-allow-credentials": "true",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "*",
+    "cache-control": "no-cache",
+    "content-length": "22256",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Thu, 16 Dec 2021 03:37:32 GMT",
+    "server": "Kestrel",
+    "strict-transport-security": "max-age=10886400",
+    "x-aspnet-version": "4.0.30319",
+    "x-content-type-options": "nosniff",
+    "x-domain-requestinfo": "fe442007d3e06e4fb4ffa41cce318bf1-21da843974fdfa4b",
+    "x-download-options": "noopen",
+    "x-firefox-spdy": "h2",
+    "x-pagination-pagenumber": "1",
+    "x-pagination-pagesize": "10",
+    "x-powered-by": "ASP.NET",
+    "x-quota-perday-limit": "500",
+    "x-quota-perday-remaining": "285",
+    "x-quota-perminute-limit": "3000",
+    "x-quota-perminute-remaining": "2990",
+    "x-quota-persecond-limit": "75",
+    "x-quota-persecond-remaining": "68",
+    "x-robots-tag": "noindex, nofollow",
+    "x-total-count": "269",
+    "x-xss-protection": "1; mode=block"
+  },
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+      "X-API-KEY": "key_9b014d5eb3381580d1f856be26c8f70c"
+    },
+    "method": "post",
+    "url": "https://api.domain.com.au/v1/listings/residential/_search",
+    "data": "{\"listingType\":\"Rent\",\"locations\":[{\"state\":\"VIC\",\"suburb\":\"brunswick\"}]}"
+  },
+  "request": {}
+}
