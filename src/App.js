@@ -2,7 +2,7 @@ import './App.css'
 
 import GoogleMapReact from 'google-map-react'
 
-import {useDomainSearchResults} from './hooks/domainAPI'
+import { useDomainSearchResults } from './hooks/domainAPI'
 
 // Google Maps
 const DEFAULT_CENTER = { lat: -37.767228, lng: 144.962176 }
@@ -28,6 +28,36 @@ function App() {
 
         </GoogleMapReact>
       </div>
+
+      {
+        isLoaded
+          ?
+          <div>
+            <p>List</p>
+            {results.status}
+            {console.log(results.data)}
+            {
+              results.data.map(r => {
+                console.log('r', r);
+                return (
+                  <div>
+                    <p>Listing</p>
+                    <h3>{r.listing.headline}</h3>
+                    <div>
+                      {
+                        r.listing.media.map(m => {
+                          if (m.category === 'Image') return <img style={{ display: 'inline', width: '100px', height: '100px' }} src={m.url} />
+                        })
+                      }
+                    </div>
+                  </div>)
+              })
+            }
+          </div>
+          :
+          <p>Loading</p>
+      }
+      
     </div>
 
   )
