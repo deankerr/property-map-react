@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+
+import GoogleMapReact from 'google-map-react'
+
+const DEFAULT_CENTER = { lat: -37.767228, lng: 144.962176 }
+const DEFAULT_ZOOM = 14
 
 function App() {
+
+console.log(process.env);
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <h1>Property Map React</h1>
+
+      <div className="googleMap">
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
+          center={DEFAULT_CENTER}
+          zoom={DEFAULT_ZOOM}
         >
-          Learn React
-        </a>
-      </header>
+
+        </GoogleMapReact>
+      </div>
     </div>
-  );
+
+  )
+
+
 }
 
 export default App;
