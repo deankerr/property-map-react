@@ -1,8 +1,10 @@
 import './App.css'
+import { useEffect } from 'react'
 
 import GoogleMapReact from 'google-map-react'
 
 import { useDomainSearchResults } from './hooks/domainAPI'
+import PropertyMapMarker from './components/PropertyMapMarker'
 
 // Google Maps
 const DEFAULT_CENTER = { lat: -37.767228, lng: 144.962176 }
@@ -13,7 +15,25 @@ function App() {
 
   const { results, isLoaded } = useDomainSearchResults()
 
+  // const [markers, setMarkers] = useState([])
 
+  // useEffect(() => {
+
+  // }, [results])
+
+  // let markers = []
+  // if (isLoaded) {
+  //   results.data.forEach(res => {
+  //     markers.push(
+  //       <PropertyMapMarker
+  //         lat={res.listing.latitude}
+  //         lng={res.listing.longitude}
+  //         headline={res.listing.headline}
+  //       />
+  //     )
+  //   })
+  // }
+  
   return (
 
     <div className="App">
@@ -25,6 +45,23 @@ function App() {
           center={DEFAULT_CENTER}
           zoom={DEFAULT_ZOOM}
         >
+
+          {/* {markers.map(m => m)} */}
+
+          {
+            isLoaded && results.data.map(res => {
+              console.log(res.listing)
+              return (
+                <PropertyMapMarker
+                  lat={res.listing.propertyDetails.latitude}
+                  lng={res.listing.propertyDetails.longitude}
+                  headline={res.listing.headline}
+                  image={res.listing.media[0].url}
+                />
+              )
+            })
+
+          }
 
         </GoogleMapReact>
       </div>
