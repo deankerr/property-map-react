@@ -33,15 +33,11 @@ function App() {
         isLoaded
           ?
           <div>
-            <p>List</p>
-            {results.status}
-            {console.log(results.data)}
+            <p>Search Results</p>
             {
               results.data.map(r => {
-                console.log('r', r);
                 return (
                   <div>
-                    <p>Listing</p>
                     <h3>{r.listing.headline}</h3>
                     <div>
                       {
@@ -57,7 +53,7 @@ function App() {
           :
           <p>Loading</p>
       }
-      
+
     </div>
 
   )
