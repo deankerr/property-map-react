@@ -37,12 +37,12 @@ function App() {
             {
               results.data.map(r => {
                 return (
-                  <div>
+                  <div key={r.listing.id}>
                     <h3>{r.listing.headline}</h3>
                     <div>
                       {
                         r.listing.media.map(m => {
-                          if (m.category === 'Image') return <img style={{ display: 'inline', width: '100px', height: '100px' }} src={m.url} />
+                          if (m.category === 'Image') return <img style={{ display: 'inline', width: '100px', height: '100px' }} src={m.url} key={m.url} />
                         })
                       }
                     </div>
