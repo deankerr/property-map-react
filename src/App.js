@@ -33,6 +33,7 @@ function App() {
                   lng={res.listing.propertyDetails.longitude}
                   headline={res.listing.headline}
                   image={res.listing.media[0].url}
+                  key={res.listing.id}
                 />
               )
           }
