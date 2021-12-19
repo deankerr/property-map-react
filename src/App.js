@@ -1,5 +1,4 @@
 import './App.css'
-import { useEffect } from 'react'
 
 import GoogleMapReact from 'google-map-react'
 
@@ -14,25 +13,6 @@ const DEFAULT_ZOOM = 14
 function App() {
 
   const { results, isLoaded } = useDomainSearchResults()
-
-  // const [markers, setMarkers] = useState([])
-
-  // useEffect(() => {
-
-  // }, [results])
-
-  // let markers = []
-  // if (isLoaded) {
-  //   results.data.forEach(res => {
-  //     markers.push(
-  //       <PropertyMapMarker
-  //         lat={res.listing.latitude}
-  //         lng={res.listing.longitude}
-  //         headline={res.listing.headline}
-  //       />
-  //     )
-  //   })
-  // }
   
   return (
 
@@ -46,12 +26,8 @@ function App() {
           zoom={DEFAULT_ZOOM}
         >
 
-          {/* {markers.map(m => m)} */}
-
           {
-            isLoaded && results.data.map(res => {
-              console.log(res.listing)
-              return (
+            isLoaded && results.data.map(res =>
                 <PropertyMapMarker
                   lat={res.listing.propertyDetails.latitude}
                   lng={res.listing.propertyDetails.longitude}
@@ -59,8 +35,6 @@ function App() {
                   image={res.listing.media[0].url}
                 />
               )
-            })
-
           }
 
         </GoogleMapReact>
