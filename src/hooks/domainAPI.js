@@ -24,6 +24,7 @@ function useDomainSearchResults() {
               "suburb": "brunswick",
             }
           ],
+          "pageSize": 10
         },
         {
           headers: {
@@ -33,7 +34,7 @@ function useDomainSearchResults() {
       )
         .then(res => {
           console.log('Domain Search Response:', res)
-          setResults(res)
+          setResults(res.data)
           setIsLoaded(true)
         })
         .catch(err => {
