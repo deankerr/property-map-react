@@ -1,0 +1,147 @@
+{
+  "data": {
+    "objective": "rent",
+    "status": "live",
+    "saleMode": "rent",
+    "channel": "residential",
+    "id": 15602214,
+    "addressParts": {
+      "stateAbbreviation": "vic",
+      "displayType": "fullAddress",
+      "streetNumber": "33",
+      "street": "Warne Street",
+      "suburb": "Brunswick",
+      "postcode": "3056",
+      "displayAddress": "33 Warne Street, Brunswick VIC 3056"
+    },
+    "advertiserIdentifiers": {
+      "advertiserType": "agency",
+      "advertiserId": 4394,
+      "contactIds": [
+        1778373,
+        1334924
+      ],
+      "agentIds": [
+        "A142573",
+        "A71706"
+      ]
+    },
+    "bathrooms": 2,
+    "bedrooms": 2,
+    "carspaces": 2,
+    "dateAvailable": "2022-01-07T00:00:00+11:00",
+    "dateUpdated": "2021-12-15T05:36:48.123Z",
+    "dateListed": "2021-12-15T05:36:48Z",
+    "description": "The winning space of this property really is the upper level, with an enormous and versatile living/entertainment zone, separate and formal meals area, and well-equipped kitchen  complete with island bench and only the best fittings and fixtures throughout.  This is all complemented by the terrace, large enough to entertain on and private enough to enjoy on your own.   Also comprises two bedrooms with built-in robes (plus a small courtyard off one), two gorgeous bathrooms (one on each level), large European laundry, an additional powder room, and access to the garage.  Additional features include split system heating/cooling units in every room, gas cooking, and dishwasher.  Within walking distance to all forms of public transport, surrounded by an unlimited supply of restaurants, cafes, gyms, bars, and parks plus easy access to major arterials.\r\n\r\n\r\nThis property is open for inspection. In accordance with Victorian Government requirements, only fully vaccinated people will be able to attend the open for inspection/and auction for this property. \r\n\t\t\r\nJellis Craig Inner North Property Management invites you to inspect this property. \r\n\t\t\r\nIf you would like to inspect this property please click 'book inspection' or 'make an appointment and we will be in contact to arrange a suitable time. Alternatively, you can email the agent or visit the property listing on www.jelliscraig.com.au and click 'Book Inspection'.",
+    "features": [
+      "Split System Air Con",
+      "Split System Heating",
+      "Balcony / Deck",
+      "Built in wardrobes",
+      "Dishwasher",
+      "Floorboards",
+      "Secure Parking"
+    ],
+    "geoLocation": {
+      "latitude": -37.75931,
+      "longitude": 144.956774
+    },
+    "headline": "Idealistic Floorplan",
+    "inspectionDetails": {
+      "inspections": [
+        {
+          "recurrence": "none",
+          "openingDateTime": "2021-12-21T05:30:00Z",
+          "closingDateTime": "2021-12-21T05:45:00Z"
+        }
+      ],
+      "pastInspections": [],
+      "isByAppointmentOnly": false
+    },
+    "isNewDevelopment": false,
+    "media": [
+      {
+        "category": "image",
+        "type": "photo",
+        "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602214_1_1_211215_053644-w2560-h1707"
+      },
+      {
+        "category": "image",
+        "type": "photo",
+        "url": "https://bucket-api.domain.com.au/v1/bucket/image/15480599_2_1_211026_122339-w3333-h2308"
+      },
+      {
+        "category": "image",
+        "type": "photo",
+        "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602214_3_1_211215_053644-w2560-h1707"
+      },
+      {
+        "category": "image",
+        "type": "photo",
+        "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602214_4_1_211215_053644-w2560-h1707"
+      },
+      {
+        "category": "image",
+        "type": "photo",
+        "url": "https://bucket-api.domain.com.au/v1/bucket/image/15602214_5_1_211215_053644-w2560-h1707"
+      }
+    ],
+    "priceDetails": {
+      "price": 670,
+      "pricePrefix": "$670.00",
+      "canDisplayPrice": true,
+      "displayPrice": "$670.00",
+      "bond": 2911
+    },
+    "propertyTypes": [
+      "townhouse"
+    ],
+    "seoUrl": "https://www.domain.com.au/33-warne-street-brunswick-vic-3056-15602214"
+  },
+  "status": 200,
+  "statusText": "OK",
+  "headers": {
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "*",
+    "content-length": "3950",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Tue, 21 Dec 2021 09:29:28 GMT",
+    "server": "Kestrel",
+    "x-domain-requestinfo": "4751f1c1e8d945489d1b1856d7a7129c-a0b3fdced3902f48",
+    "x-firefox-spdy": "h2",
+    "x-quota-perday-limit": "500",
+    "x-quota-perday-remaining": "371",
+    "x-quota-perminute-limit": "3000",
+    "x-quota-perminute-remaining": "2999",
+    "x-quota-persecond-limit": "75",
+    "x-quota-persecond-remaining": "74"
+  },
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "transformRequest": [
+      null
+    ],
+    "transformResponse": [
+      null
+    ],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "headers": {
+      "Accept": "application/json, text/plain, */*"
+    },
+    "params": {
+      "id": "15602214",
+      "api_key": "key_9b014d5eb3381580d1f856be26c8f70c"
+    },
+    "method": "get",
+    "url": "https://api.domain.com.au/v1/listings/15602214"
+  },
+  "request": {}
+}

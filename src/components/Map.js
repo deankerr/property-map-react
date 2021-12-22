@@ -1,6 +1,6 @@
 import GoogleMapReact from 'google-map-react'
 
-import { useDomainSearchResults } from '../hooks/domainAPI'
+import { useSearchResults } from '../hooks/domainAPI'
 import PropertyMapMarker from './PropertyMapMarker'
 
 // Google Maps
@@ -9,7 +9,7 @@ const DEFAULT_ZOOM = 14
 
 export default function Map() {
 
-  const { results, isLoaded } = useDomainSearchResults()
+  const { results, isLoaded } = useSearchResults()
 
   return (
     <>
@@ -21,13 +21,14 @@ export default function Map() {
         >
           {
             isLoaded && results.map(res =>
-              <PropertyMapMarker
-                lat={res.listing.propertyDetails.latitude}
-                lng={res.listing.propertyDetails.longitude}
-                headline={res.listing.headline}
-                image={res.listing.media[0].url}
-                key={res.listing.id}
-              />
+                <PropertyMapMarker
+                  lat={res.listing.propertyDetails.latitude}
+                  lng={res.listing.propertyDetails.longitude}
+                  headline={res.listing.headline}
+                  image={res.listing.media[0].url}
+                  id={res.listing.id}
+                  key={res.listing.id}
+                />
             )
           }
         </GoogleMapReact>
