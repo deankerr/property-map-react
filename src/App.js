@@ -21,7 +21,7 @@ function App() {
 
     <Router>
       <div className="App">
-        <h1>Property Map React</h1>
+        <h1>properfi</h1>
         <hr />
 
         <Switch>

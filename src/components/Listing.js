@@ -1,4 +1,5 @@
 import './Listing.css'
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { useListingResult } from '../hooks/domainAPI'
@@ -8,11 +9,26 @@ export default function Listing(props) {
   const { listingCache, saveListingToCache } = props
 
 
-  const { result, isLoaded, error } = useListingResult(params.id, listingCache, saveListingToCache)
+  const { result, isLoaded } = useListingResult(params.id, listingCache, saveListingToCache)
 
   const { addressParts, description, media, seoUrl, propertyTypes, bathrooms, bedrooms, carspaces,
     headline, priceDetails } = result
 
+
+  const [ mediaIndex, setMediaIndex ] = useState(0)
+
+  function handleLeftButtonClick() {
+    let newIndex = mediaIndex - 1
+    if (newIndex < 0) newIndex = media.length - 1
+    setMediaIndex(newIndex)
+  }
+
+  function handleRightButtonClick() {
+    let newIndex = mediaIndex + 1
+    if (newIndex === media.length) newIndex = 0
+    setMediaIndex(newIndex)
+  }
+  
   return (
     <div>
       {
@@ -23,7 +39,15 @@ export default function Listing(props) {
             <div className="listingTopContainer">
 
               <div className="listingMedia">
-                <img src={media[0].url} />
+                <div className="mediaScrollButton" onClick={ handleLeftButtonClick }>
+                  &lt;
+                </div>
+                <div className="media">
+                  <img src={media[mediaIndex].url} />
+                </div>
+                <div className="mediaScrollButton" onClick={ handleRightButtonClick }>
+                  &gt;
+                </div>
               </div>
 
               <div className="listingInfo">
