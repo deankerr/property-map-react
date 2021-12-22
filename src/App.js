@@ -1,9 +1,10 @@
 import './normalize.css'
 import './App.css'
 import { useState } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import Map from './components/Map'
+import Search from './components/Search'
 import Listing from './components/Listing'
 
 function App() {
@@ -28,7 +29,15 @@ function App() {
 
     <Router>
       <div className="App">
-        <h1>properfi</h1>
+        <header>
+          <h1>properfi</h1>
+          <nav>
+            <Link to="/rent">Rent</Link>
+            <Link to="/buy">Buy</Link>
+            <Link to="/favourites">Favourites</Link>
+          </nav>
+        </header>
+        
         <hr />
 
         <Switch>
@@ -37,8 +46,12 @@ function App() {
             <Listing listingCache={listingCache} saveListingToCache={saveListingToCache} searchCache={searchCache} />
           </Route>
 
+          <Route path="/rent">
+            <Search searchCache={searchCache} saveSearchCache={saveSearchCache} searchType="rent" />
+          </Route>
+
           <Route exact path="/">
-            <Map searchCache={searchCache} saveSearchCache={saveSearchCache} />
+            
           </Route>
 
           <Route path="*">

@@ -4,8 +4,8 @@
 
 .googleMap {
   display: inline-block;
-  height: 80vh;
-  width: 50vw;
+  height: 85vh;
+  width: 100%;
 }
 
 .propertyMapMarker {
@@ -19,4 +19,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+nav a {
+  margin: 30px;
+  color: #000;
 }
