@@ -12,3 +12,7 @@
 .searchControls select {
   margin-left: 5px;
 }
+
+.errorMessage {
+  color: #F00;
+}

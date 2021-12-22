@@ -38,7 +38,7 @@ export default function Listing(props) {
           <div>
 
             {
-            searchCache.length > 0 &&
+            searchCache.data &&
             
               <div className="backBar">
                 <div className="backButton" onClick={history.goBack}>
