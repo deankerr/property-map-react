@@ -6,12 +6,13 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Map from './components/Map'
 import Search from './components/Search'
 import Listing from './components/Listing'
+import { useEffect } from 'react/cjs/react.development'
 
 function App() {
   
   const [searchCache, setSearchCache] = useState({})
   function saveSearchCache(data) {
-    console.log(`Saving to searchCache`)
+    console.log(`Saving to searchCache`, data)
     setSearchCache(data)
   }
 
@@ -25,12 +26,14 @@ function App() {
     setListingCache(newCache)
   }
 
+  
+
   return (
 
     <Router>
       <div className="App">
         <header>
-          <h1>properfi</h1>
+          <h1>Propertify</h1>
           <nav>
             <Link to="/rent">Rent</Link>
             <Link to="/buy">Buy</Link>
@@ -47,7 +50,11 @@ function App() {
           </Route>
 
           <Route path="/rent">
-            <Search searchCache={searchCache} saveSearchCache={saveSearchCache} searchType="rent" />
+            <Search searchCache={searchCache} saveSearchCache={saveSearchCache} listingType="Rent" />
+          </Route>
+
+          <Route path="/buy">
+            <Search searchCache={searchCache} saveSearchCache={saveSearchCache} listingType="Sale" />
           </Route>
 
           <Route exact path="/">

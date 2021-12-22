@@ -9,7 +9,10 @@
 
 .listingMedia {
   /* border: 1px green dotted; */
-  max-height: 800px;
+  /* max-height: 800px; */
+}
+
+.mediaContainer {
   display: flex;
 }
 

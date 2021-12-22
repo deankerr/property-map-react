@@ -11,9 +11,13 @@ function useSearchResults(formQuery, searchCache, saveSearchCache) {
   const [isLoaded, setIsLoaded] = useState(false)
   const [error, setError] = useState(null)
 
+  function clearResults() {
+    setResults([])
+    setIsLoaded(false)
+    setError(null)
+  }
 
   useEffect(() => {
-    console.log('API formQuery', formQuery);
     if (formQuery.suburb) {
       setIsLoaded(false)
 
@@ -25,7 +29,7 @@ function useSearchResults(formQuery, searchCache, saveSearchCache) {
 
         axios.post(DOMAIN_BASE_URL + SEARCH_METHOD,
           {
-            "listingType": "Rent",
+            "listingType": formQuery.listingType,
             "locations": [
               {
                 "state": formQuery.state,
@@ -59,7 +63,7 @@ function useSearchResults(formQuery, searchCache, saveSearchCache) {
     }
   }, [formQuery])
 
-  return { results, isLoaded, error }
+  return { results, isLoaded, error, clearResults }
 }
 
 

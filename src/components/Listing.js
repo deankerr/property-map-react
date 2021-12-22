@@ -16,7 +16,7 @@ export default function Listing(props) {
     headline, priceDetails } = result
 
 
-  const [ mediaIndex, setMediaIndex ] = useState(0)
+  const [mediaIndex, setMediaIndex] = useState(0)
 
   function handleLeftButtonClick() {
     let newIndex = mediaIndex - 1
@@ -29,7 +29,7 @@ export default function Listing(props) {
     if (newIndex === media.length) newIndex = 0
     setMediaIndex(newIndex)
   }
-  
+
   return (
     <div>
       {
@@ -38,11 +38,11 @@ export default function Listing(props) {
           <div>
 
             {
-            searchCache.data &&
-            
+              searchCache.data &&
+
               <div className="backBar">
                 <div className="backButton" onClick={history.goBack}>
-                  &lt; Back to map 
+                  &lt; Back to map
                 </div>
               </div>
             }
@@ -50,14 +50,16 @@ export default function Listing(props) {
             <div className="listingTopContainer">
 
               <div className="listingMedia">
-                <div className="mediaScrollButton" onClick={ handleLeftButtonClick }>
-                  &lt;
-                </div>
-                <div className="media">
-                  <img src={media[mediaIndex].url} />
-                </div>
-                <div className="mediaScrollButton" onClick={ handleRightButtonClick }>
-                  &gt;
+                <div className="mediaContainer">
+                  <div className="mediaScrollButton" onClick={handleLeftButtonClick}>
+                    &lt;
+                  </div>
+                  <div className="media">
+                    <img src={media[mediaIndex].url} />
+                  </div>
+                  <div className="mediaScrollButton" onClick={handleRightButtonClick}>
+                    &gt;
+                  </div>
                 </div>
               </div>
 

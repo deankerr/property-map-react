@@ -5,16 +5,19 @@ import Map from './Map'
 import { useEffect } from 'react/cjs/react.development'
 
 export default function Search(props) {
-  const { searchCache, saveSearchCache } = props
+  const { searchCache, saveSearchCache, listingType } = props
 
-  const [searchForm, setSearchForm] = useState({
+  const DEFAULT_FORM_VALUES = {
     suburb: 'Carlton',
     state: 'VIC',
     priceMin: 'any',
     priceMax: 'any',
     bedsMin: 'any',
-    bathsMin: 'any'
-  })
+    bathsMin: 'any',
+    listingType
+  }
+
+  const [searchForm, setSearchForm] = useState(DEFAULT_FORM_VALUES)
 
   function handleFormChange(ev) {
     setSearchForm({
@@ -49,18 +52,24 @@ export default function Search(props) {
   const [noResults, setNoResults] = useState(false)
 
   useEffect(() => {
-    console.log('no Res',);
     if (searchCache.data && searchCache.data.length === 0) setNoResults(true)
     else setNoResults(false)
   }, [searchCache])
 
+  
+  // reset form if we just changed from rent <-> buy
+  useEffect( () => {
+    console.log('switched modes search')
+    setSearchForm(DEFAULT_FORM_VALUES)
+  }, [listingType])
 
+  console.log(`Time to ${listingType}`);
   return (
     <div className="searchContainer">
 
 
       <div className="searchControls">
-        <h3>Search Rental Properties</h3>
+        <h3>Search Properties For {listingType}</h3>
         <form onSubmit={handleSubmit}>
           <input type="text" name="suburb" placeholder="Suburb" onChange={handleFormChange} value={searchForm.suburb} />
           <select name="state" value={searchForm.state} onChange={handleFormChange}>
@@ -131,7 +140,7 @@ export default function Search(props) {
       </div>
 
       <div className="mapContainer">
-        <Map searchCache={searchCache} saveSearchCache={saveSearchCache} formQuery={formQuery} />
+        <Map searchCache={searchCache} saveSearchCache={saveSearchCache} formQuery={formQuery} listingType={listingType} />
       </div>
 
     </div>

@@ -10,9 +10,9 @@ const DEFAULT_ZOOM = 16
 
 export default function Map(props) {
 
-  const { searchCache, saveSearchCache, formQuery } = props
+  const { searchCache, saveSearchCache, formQuery, listingType } = props
 
-  const { results, isLoaded } = useSearchResults(formQuery, searchCache, saveSearchCache)
+  const { results, isLoaded, clearResults } = useSearchResults(formQuery, searchCache, saveSearchCache)
 
 
   const [center, setCenter] = useState(DEFAULT_CENTER)
@@ -31,6 +31,12 @@ export default function Map(props) {
 
     }
   }, [isLoaded])
+
+  
+  // Erase results if we just changed from rent <-> buy
+  useEffect( () => {
+    clearResults()
+  }, [listingType])
 
   return (
     <>
