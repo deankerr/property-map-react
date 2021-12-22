@@ -1,13 +1,14 @@
 import './Listing.css'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
+
 
 import { useListingResult } from '../hooks/domainAPI'
 
 export default function Listing(props) {
   const params = useParams()
-  const { listingCache, saveListingToCache } = props
-
+  const { listingCache, saveListingToCache, searchCache } = props
+  const history = useHistory()
 
   const { result, isLoaded } = useListingResult(params.id, listingCache, saveListingToCache)
 
@@ -35,6 +36,16 @@ export default function Listing(props) {
         isLoaded
           ?
           <div>
+
+            {
+            searchCache.length > 0 &&
+            
+              <div className="backBar">
+                <div className="backButton" onClick={history.goBack}>
+                  &lt; Back to map 
+                </div>
+              </div>
+            }
 
             <div className="listingTopContainer">
 

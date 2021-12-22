@@ -7,9 +7,10 @@ import PropertyMapMarker from './PropertyMapMarker'
 const DEFAULT_CENTER = { lat: -37.767228, lng: 144.962176 }
 const DEFAULT_ZOOM = 14
 
-export default function Map() {
+export default function Map(props) {
 
-  const { results, isLoaded } = useSearchResults()
+  const {searchCache, saveSearchCache} = props
+  const { results, isLoaded } = useSearchResults(searchCache, saveSearchCache)
 
   return (
     <>

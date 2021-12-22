@@ -8,6 +8,13 @@ import Listing from './components/Listing'
 
 function App() {
   
+  const [searchCache, setSearchCache] = useState({})
+  function saveSearchCache(data) {
+    console.log(`Saving to searchCache`)
+    setSearchCache(data)
+  }
+
+
   const [listingCache, setListingCache] = useState([])
 
   function saveListingToCache(data) {
@@ -27,10 +34,12 @@ function App() {
         <Switch>
 
           <Route path="/listing/:id">
-            <Listing listingCache={listingCache} saveListingToCache={saveListingToCache} />
+            <Listing listingCache={listingCache} saveListingToCache={saveListingToCache} searchCache={searchCache} />
           </Route>
 
-          <Route exact path="/" component={Map} />
+          <Route exact path="/">
+            <Map searchCache={searchCache} saveSearchCache={saveSearchCache} />
+          </Route>
 
           <Route path="*">
             <p>Page not found</p>

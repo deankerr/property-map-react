@@ -5,7 +5,7 @@ import axios from 'axios'
 const DOMAIN_BASE_URL = 'https://api.domain.com.au/v1/listings/'
 const SEARCH_METHOD = 'residential/_search'
 
-function useSearchResults() {
+function useSearchResults(searchCache, saveSearchCache) {
 
   const [results, setResults] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
@@ -13,8 +13,13 @@ function useSearchResults() {
 
 
   useEffect(() => {
+    setIsLoaded(false)
 
-    if (!isLoaded) {
+    if (searchCache.length > 0) {
+      console.log(`Using searchCache`, searchCache)
+      setResults(searchCache)
+      setIsLoaded(true)
+    } else {
 
       axios.post(DOMAIN_BASE_URL + SEARCH_METHOD,
         {
@@ -36,6 +41,7 @@ function useSearchResults() {
         .then(res => {
           console.log('Domain Search Response:', res)
           setResults(res.data)
+          saveSearchCache(res.data)
           setIsLoaded(true)
         })
         .catch(err => {
@@ -65,7 +71,8 @@ function useListingResult(id, listingCache, saveListingToCache) {
     if (cacheSearch.length > 0) {
       console.log(`Using listingCache for id: ${id}`, listingCache)
       setResults(cacheSearch[0])
-      setIsLoaded(true)      
+      setIsLoaded(true) 
+
     } else {
       axios.get(DOMAIN_BASE_URL + id, {
         params: {

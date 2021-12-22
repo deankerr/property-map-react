@@ -29,7 +29,7 @@
 .mediaScrollButton:hover {
   background-color: #777;
   color: #EEE;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .media {
@@ -55,4 +55,15 @@
 .description {
   text-align: justify;
   padding: 0 20px;
+}
+
+.backBar {
+  margin: 0 auto 10px;
+  max-width: 1550px;
+  text-align: left;
+}
+
+.backButton {
+  cursor: pointer;
+  text-decoration: underline;
 }
