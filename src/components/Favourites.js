@@ -9,7 +9,7 @@ export default function Favourites(props) {
       <h3>Favourites</h3>
 
       {
-        faves
+        faves.length
           ?
           faves.map(fave => {
             return (
