@@ -7,7 +7,7 @@ export default function Search(props) {
   const { searchCache, saveSearchCache, listingType } = props
 
   const DEFAULT_FORM_VALUES = {
-    suburb: 'Brunswick',
+    suburb: '',
     state: 'VIC',
     priceMin: '0',
     priceMax: '0',

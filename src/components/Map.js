@@ -5,7 +5,7 @@ import { useSearchResults } from '../hooks/domainAPI'
 import PropertyMapMarker from './PropertyMapMarker'
 
 // Google Maps
-const DEFAULT_CENTER = { lat: -37.767228, lng: 144.962176 }
+const DEFAULT_CENTER = { lat: -37.8136, lng: 144.9631 }
 const DEFAULT_ZOOM = 15
 
 export default function Map(props) {
