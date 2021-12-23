@@ -35,6 +35,7 @@ export default function Map(props) {
   // Erase results if we just changed from rent <-> buy
   useEffect(() => {
     clearResults()
+    saveSearchCache({})
   }, [listingType])
 
   return (

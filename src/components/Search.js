@@ -29,15 +29,19 @@ export default function Search(props) {
   const [formQuery, setFormQuery] = useState({})
 
   useEffect(() => {
-    if (searchCache.formQuery) {
+    if (searchCache.formQuery && searchCache.formQuery.listingType === listingType) {
+      console.log('setting query');
       setSearchForm(searchCache.formQuery)
       setFormQuery(searchCache.formQuery)
+    } else {
+      setSearchForm(DEFAULT_FORM_VALUES)
+      setFormQuery({})
     }
   }, [])
 
   function handleSubmit(ev) {
     setFormQuery(searchForm)
-    console.log('submit');
+    console.log('submit', searchForm);
     ev.preventDefault()
   }
 

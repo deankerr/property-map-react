@@ -3,9 +3,10 @@ import './App.css'
 import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import Search from './components/Search'
 import Listing from './components/Listing'
 import Favourites from './components/Favourites'
+import Buy from './components/Buy'
+import Rent from './components/Rent'
 
 function App() {
   
@@ -47,11 +48,11 @@ function App() {
           </Route>
 
           <Route path="/rent">
-            <Search searchCache={searchCache} saveSearchCache={saveSearchCache} listingType="Rent" />
+            <Rent searchCache={searchCache} saveSearchCache={saveSearchCache} />
           </Route>
 
           <Route path="/buy">
-            <Search searchCache={searchCache} saveSearchCache={saveSearchCache} listingType="Sale" />
+            <Buy searchCache={searchCache} saveSearchCache={saveSearchCache} />
           </Route>
 
           <Route path="/favourites">

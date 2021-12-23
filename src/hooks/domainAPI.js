@@ -18,6 +18,7 @@ function useSearchResults(formQuery, searchCache, saveSearchCache) {
   }
 
   useEffect(() => {
+    console.log('api');
     if (formQuery.suburb) {
       setIsLoaded(false)
 
