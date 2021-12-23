@@ -1,5 +1,5 @@
 import GoogleMapReact from 'google-map-react'
-import { useState, useEffect } from 'react/cjs/react.development'
+import { useState, useEffect } from 'react'
 
 import { useSearchResults } from '../hooks/domainAPI'
 import PropertyMapMarker from './PropertyMapMarker'
@@ -62,31 +62,6 @@ export default function Map(props) {
 
         </GoogleMapReact>
       </div>
-
-      {/* {
-        isLoaded
-          ?
-          <div>
-            <p>Search Results</p>
-            {
-              results.map(r => {
-                return (
-                  <div key={r.listing.id}>
-                    <h3>{r.listing.headline}</h3>
-                    <div>
-                      {
-                        r.listing.media.map(m => {
-                          if (m.category === 'Image') return <img style={{ display: 'inline', width: '100px', height: '100px' }} src={m.url} key={m.url} />
-                        })
-                      }
-                    </div>
-                  </div>)
-              })
-            }
-          </div>
-          :
-          <p>Loading</p>
-      } */}
     </>
   )
 

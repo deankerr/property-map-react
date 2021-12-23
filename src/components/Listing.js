@@ -5,7 +5,6 @@ import { useParams, useHistory } from 'react-router-dom'
 
 import { useListingResult } from '../hooks/domainAPI'
 import { useFavourites } from '../hooks/useFavourites'
-import { useEffect } from 'react/cjs/react.development'
 
 export default function Listing(props) {
   const params = useParams()

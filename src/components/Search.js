@@ -63,7 +63,7 @@ export default function Search(props) {
   
   // reset form if we just changed from rent <-> buy
   useEffect( () => {
-    console.log('clear vals');
+    console.log('listing type updated');
     // setSearchForm(DEFAULT_FORM_VALUES)
   }, [listingType])
 
