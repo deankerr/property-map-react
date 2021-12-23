@@ -64,9 +64,16 @@
   margin: 0 auto 10px;
   max-width: 1550px;
   text-align: left;
+  display: flex;
+  justify-content: space-between;
 }
 
 .backButton {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.faveButton {
   cursor: pointer;
   text-decoration: underline;
 }

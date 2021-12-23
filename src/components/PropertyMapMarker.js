@@ -7,7 +7,6 @@ export default function PropertyMapMarker (props) {
   return (
     <Link to={`/listing/${props.id}`}>
       <div className="propertyMapMarker" style={styleValue}>
-        {props.headline}
       </div>
     </Link>
   )

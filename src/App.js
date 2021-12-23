@@ -3,10 +3,9 @@ import './App.css'
 import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import Map from './components/Map'
 import Search from './components/Search'
 import Listing from './components/Listing'
-import { useEffect } from 'react/cjs/react.development'
+import Favourites from './components/Favourites'
 
 function App() {
   
@@ -25,8 +24,6 @@ function App() {
     console.log(`New cache is:`, newCache)
     setListingCache(newCache)
   }
-
-  
 
   return (
 
@@ -55,6 +52,10 @@ function App() {
 
           <Route path="/buy">
             <Search searchCache={searchCache} saveSearchCache={saveSearchCache} listingType="Sale" />
+          </Route>
+
+          <Route path="/favourites">
+            <Favourites />
           </Route>
 
           <Route exact path="/">

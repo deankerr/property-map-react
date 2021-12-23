@@ -1,0 +1,13 @@
+.faveItem {
+  width: 400px;
+  display: block;
+  border: 1px black solid;
+  margin: 0 auto 10px auto;
+}
+
+.faveImg {
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}

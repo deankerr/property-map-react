@@ -4,6 +4,8 @@ import { useParams, useHistory } from 'react-router-dom'
 
 
 import { useListingResult } from '../hooks/domainAPI'
+import { useFavourites } from '../hooks/useFavourites'
+import { useEffect } from 'react/cjs/react.development'
 
 export default function Listing(props) {
   const params = useParams()
@@ -30,6 +32,22 @@ export default function Listing(props) {
     setMediaIndex(newIndex)
   }
 
+  const { faves, addFave, removeFave } = useFavourites()
+  let faveButton
+  if (faves.filter(listing => listing.id == params.id).length > 0) {
+    faveButton = (
+      <div className="faveButton" onClick={() => removeFave(result)}>
+        ❤️ Remove from favourites
+      </div>
+    )
+  } else {
+    faveButton = (
+      <div className="faveButton" onClick={() => addFave(result)}>
+        ❤️ Add to favourites
+      </div>
+    )
+  }
+
   return (
     <div>
       {
@@ -37,16 +55,20 @@ export default function Listing(props) {
           ?
           <div>
 
-            {
-              searchCache.data &&
+            <div className="backBar">
+              {
+                searchCache.data && (
+                  <div className="backButton" onClick={history.goBack}>
+                    &lt; Back to map
+                  </div>
+                )
+              }
 
-              <div className="backBar">
-                <div className="backButton" onClick={history.goBack}>
-                  &lt; Back to map
-                </div>
-              </div>
-            }
+              <div></div>
 
+              {faveButton}
+
+            </div>
             <div className="listingTopContainer">
 
               <div className="listingMedia">

@@ -1,8 +1,7 @@
 import './Search.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Map from './Map'
-import { useEffect } from 'react/cjs/react.development'
 
 export default function Search(props) {
   const { searchCache, saveSearchCache, listingType } = props
@@ -38,6 +37,7 @@ export default function Search(props) {
 
   function handleSubmit(ev) {
     setFormQuery(searchForm)
+    console.log('submit');
     ev.preventDefault()
   }
 
@@ -53,7 +53,6 @@ export default function Search(props) {
   }
   
 
-
   const [noResults, setNoResults] = useState(false)
 
   useEffect(() => {
@@ -64,12 +63,13 @@ export default function Search(props) {
   
   // reset form if we just changed from rent <-> buy
   useEffect( () => {
-    setSearchForm(DEFAULT_FORM_VALUES)
+    console.log('clear vals');
+    // setSearchForm(DEFAULT_FORM_VALUES)
   }, [listingType])
 
 
   return (
-    <div className="searchContainer">
+    <div className="sideBarContainer">
 
 
       <div className="searchControls">

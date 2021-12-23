@@ -38,10 +38,15 @@ function useSearchResults(formQuery, searchCache, saveSearchCache) {
               "suburb": formQuery.suburb,
             }
           ],
-          "minBedrooms": formQuery.bedsMin,
-          "minBathrooms": formQuery.bathsMin,
+          "minBedrooms": parseInt(formQuery.bedsMin),
+          "minBathrooms": parseInt(formQuery.bathsMin),
+          "minPrice": parseInt(formQuery.priceMin),
           "pageSize": 20
         }
+
+        const max = parseInt(formQuery.priceMax)
+        if (max > 0) query["maxPrice"] = max
+ 
         console.log('Query:', query);
 
         axios.post(DOMAIN_BASE_URL + SEARCH_METHOD,

@@ -10,7 +10,7 @@
 
 .propertyMapMarker {
   width: 100px;
-  height: 100px;
+  height: 68px;
   top: -50px;
   left: -50px;
   position: relative;
@@ -21,7 +21,16 @@
   background-size: contain;
 }
 
+a {
+  color: #000;
+}
+
 nav a {
   margin: 30px;
-  color: #000;
+}
+
+.sideBarContainer {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 3.5fr;
 }
