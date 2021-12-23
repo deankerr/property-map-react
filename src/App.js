@@ -60,7 +60,7 @@ function App() {
           </Route>
 
           <Route exact path="/">
-            
+            <p>Select an option above to begin!</p>
           </Route>
 
           <Route path="*">
