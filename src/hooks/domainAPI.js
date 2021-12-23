@@ -27,17 +27,25 @@ function useSearchResults(formQuery, searchCache, saveSearchCache) {
         setIsLoaded(true)
       } else {
 
+        const query = {
+          "listingType": formQuery.listingType,
+          "listingAttributes": [
+            "HasPhotos"
+          ],
+          "locations": [
+            {
+              "state": formQuery.state,
+              "suburb": formQuery.suburb,
+            }
+          ],
+          "minBedrooms": formQuery.bedsMin,
+          "minBathrooms": formQuery.bathsMin,
+          "pageSize": 20
+        }
+        console.log('Query:', query);
+
         axios.post(DOMAIN_BASE_URL + SEARCH_METHOD,
-          {
-            "listingType": formQuery.listingType,
-            "locations": [
-              {
-                "state": formQuery.state,
-                "suburb": formQuery.suburb,
-              }
-            ],
-            "pageSize": 20
-          },
+          query,
           {
             headers: {
               'X-API-KEY': process.env.REACT_APP_DOMAIN_API_KEY
@@ -45,6 +53,7 @@ function useSearchResults(formQuery, searchCache, saveSearchCache) {
           }
         )
           .then(res => {
+            res.data = res.data.filter(res => res.type === "PropertyListing") // TODO: support "Project" listings
             console.log('Domain Search Response:', res)
             setResults(res.data)
             saveSearchCache(

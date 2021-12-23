@@ -6,7 +6,7 @@ import PropertyMapMarker from './PropertyMapMarker'
 
 // Google Maps
 const DEFAULT_CENTER = { lat: -37.767228, lng: 144.962176 }
-const DEFAULT_ZOOM = 16
+const DEFAULT_ZOOM = 15
 
 export default function Map(props) {
 
@@ -27,14 +27,13 @@ export default function Map(props) {
       lat = lat / results.length
       lng = lng / results.length
       setCenter({ lat, lng })
-      console.log('new centre', center);
 
     }
   }, [isLoaded])
 
-  
+
   // Erase results if we just changed from rent <-> buy
-  useEffect( () => {
+  useEffect(() => {
     clearResults()
   }, [listingType])
 
@@ -47,16 +46,18 @@ export default function Map(props) {
           zoom={DEFAULT_ZOOM}
         >
           {
-            isLoaded && results.map(res =>
-              <PropertyMapMarker
-                lat={res.listing.propertyDetails.latitude}
-                lng={res.listing.propertyDetails.longitude}
-                headline={res.listing.headline}
-                image={res.listing.media[0].url}
-                id={res.listing.id}
-                key={res.listing.id}
-              />
-            )
+            isLoaded && results.map(res => {
+                return (
+                  <PropertyMapMarker
+                    lat={res.listing.propertyDetails.latitude}
+                    lng={res.listing.propertyDetails.longitude}
+                    headline={res.listing.headline}
+                    image={res.listing.media[0].url}
+                    id={res.listing.id}
+                    key={res.listing.id}
+                  />
+                )
+            })
           }
 
         </GoogleMapReact>

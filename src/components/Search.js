@@ -8,12 +8,12 @@ export default function Search(props) {
   const { searchCache, saveSearchCache, listingType } = props
 
   const DEFAULT_FORM_VALUES = {
-    suburb: 'Carlton',
+    suburb: 'Brunswick',
     state: 'VIC',
-    priceMin: 'any',
-    priceMax: 'any',
-    bedsMin: 'any',
-    bathsMin: 'any',
+    priceMin: '0',
+    priceMax: '0',
+    bedsMin: '0',
+    bathsMin: '0',
     listingType
   }
 
@@ -42,11 +42,16 @@ export default function Search(props) {
   }
 
 
+  // Generate Price select options
   let priceOptions = []
-
-  for (let i = 0; i <= 2000; i = i + 100) {
-    priceOptions.push(<option value={i} key={i}>{i}</option>)
+  if (listingType === 'Rent') {
+    for (let i = 100; i <= 2000; i = i + 100) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
+    for (let i = 3000; i <= 5000; i = i + 1000) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
+  } else {
+    for (let i = 50000; i <= 1000000; i = i + 50000) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
+    for (let i = 1500000; i <= 5000000; i = i + 500000) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
   }
+  
 
 
   const [noResults, setNoResults] = useState(false)
@@ -59,11 +64,10 @@ export default function Search(props) {
   
   // reset form if we just changed from rent <-> buy
   useEffect( () => {
-    console.log('switched modes search')
     setSearchForm(DEFAULT_FORM_VALUES)
   }, [listingType])
 
-  console.log(`Time to ${listingType}`);
+
   return (
     <div className="searchContainer">
 
@@ -88,7 +92,7 @@ export default function Search(props) {
           <label>
             Price (min)
             <select name="priceMin" value={searchForm.priceMin} onChange={handleFormChange}>
-              <option value="any">Any</option>
+              <option value="0">Any</option>
               {priceOptions.map(option => option)}
             </select>
           </label>
@@ -97,7 +101,7 @@ export default function Search(props) {
           <label>
             Price (max)
             <select name="priceMax" value={searchForm.priceMax} onChange={handleFormChange}>
-              <option value="any">Any</option>
+              <option value="0">Any</option>
               {priceOptions.map(option => option)}
             </select>
           </label>
@@ -107,7 +111,7 @@ export default function Search(props) {
           <label>
             Bedrooms (min)
             <select name="bedsMin" value={searchForm.bedsMin} onChange={handleFormChange}>
-              <option value="any">Any</option>
+              <option value="0">Any</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -121,7 +125,7 @@ export default function Search(props) {
           <label>
             Bathrooms (min)
             <select name="bathsMin" value={searchForm.bathsMin} onChange={handleFormChange}>
-              <option value="any">Any</option>
+              <option value="0">Any</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
