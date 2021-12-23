@@ -19,7 +19,8 @@ function useFavourites() {
   }
 
   function removeFave(item) {
-    const newFaves = faves.filter(items => items != item)
+    console.log(item);
+    const newFaves = faves.filter(items => items.id != item.id)
     setFaves(newFaves)
   }
 
