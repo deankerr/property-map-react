@@ -28,9 +28,3 @@ a {
 .nav-toolbar > .btn {
   margin-right: 1rem;
 }
-
-.sideBarContainer {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 3.5fr;
-}

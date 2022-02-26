@@ -55,7 +55,7 @@ export default function Search(props) {
     for (let i = 50000; i <= 1000000; i = i + 50000) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
     for (let i = 1500000; i <= 5000000; i = i + 500000) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
   }
-  
+
 
   const [noResults, setNoResults] = useState(false)
 
@@ -67,84 +67,94 @@ export default function Search(props) {
 
 
   return (
-    <div className="sideBarContainer">
+    <div className="container-xl">
 
+      <div className="row">
+        <div className="col-lg-3">
+          <h4>Search Properties For {listingType}</h4>
 
-      <div className="searchControls">
-        <h3>Search Properties For {listingType}</h3>
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="suburb" placeholder="Suburb" onChange={handleFormChange} value={searchForm.suburb} />
-          <select name="state" value={searchForm.state} onChange={handleFormChange}>
-            <option value="ACT">ACT</option>
-            <option value="NSW">NSW</option>
-            <option value="NT">NT</option>
-            <option value="QLD">QLD</option>
-            <option value="SA">SA</option>
-            <option value="TAS">TAS</option>
-            <option value="VIC">VIC</option>
-            <option value="WA">WA</option>
-          </select>
-          <br />
-          <br />
+          <form onSubmit={handleSubmit}>
 
-          <label>
-            Price (min)
-            <select name="priceMin" value={searchForm.priceMin} onChange={handleFormChange}>
-              <option value="0">Any</option>
-              {priceOptions.map(option => option)}
-            </select>
-          </label>
-          <br />
+            <div className="row mb-3 justify-content-center">
+              <div className="col-6 col-lg-8 px-2">
+                <input className="form-control" type="text" name="suburb" placeholder="Suburb" onChange={handleFormChange} value={searchForm.suburb} />
+              </div>
 
-          <label>
-            Price (max)
-            <select name="priceMax" value={searchForm.priceMax} onChange={handleFormChange}>
-              <option value="0">Any</option>
-              {priceOptions.map(option => option)}
-            </select>
-          </label>
-          <br />
-          <br />
+              <div className="col-4 col-lg-4 px-1">
+                <select className="form-select" name="state" value={searchForm.state} onChange={handleFormChange}>
+                  <option value="ACT">ACT</option>
+                  <option value="NSW">NSW</option>
+                  <option value="NT">NT</option>
+                  <option value="QLD">QLD</option>
+                  <option value="SA">SA</option>
+                  <option value="TAS">TAS</option>
+                  <option value="VIC">VIC</option>
+                  <option value="WA">WA</option>
+                </select>
+              </div>
+            </div>
 
-          <label>
-            Bedrooms (min)
-            <select name="bedsMin" value={searchForm.bedsMin} onChange={handleFormChange}>
-              <option value="0">Any</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </label>
-          <br />
-          <br />
+            <div className="row mb-1 justify-content-center">
+              <label className="col-4 col-lg-5 col-form-label text-nowrap">Price (min)</label>
+              <div className="col-4 col-lg-7">
+                <select className="form-select" name="priceMin" value={searchForm.priceMin} onChange={handleFormChange}>
+                  <option value="0">Any</option>
+                  {priceOptions.map(option => option)}
+                </select>
+              </div>
 
-          <label>
-            Bathrooms (min)
-            <select name="bathsMin" value={searchForm.bathsMin} onChange={handleFormChange}>
-              <option value="0">Any</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </label>
-          <br />
-          <br />
-          <button>Search!</button>
-        </form>
+            </div>
 
-        {
-          noResults && <p className='errorMessage'>No results found!</p>
-        }
+            <div className="row mb-3 justify-content-center">
+              <label className="col-4 col-lg-5 col-form-label text-nowrap">Price (max)</label>
+              <div className="col-4 col-lg-7">
+                <select className="form-select" name="priceMax" value={searchForm.priceMax} onChange={handleFormChange}>
+                  <option value="0">Any</option>
+                  {priceOptions.map(option => option)}
+                </select>
+              </div>
+            </div>
+
+            <div className="row mb-1 justify-content-center">
+              <label className="col-4 col-lg-5 col-form-label text-nowrap">Bedrooms (min)</label>
+              <div className="col-4 col-lg-7">
+                <select className="form-select" name="bedsMin" value={searchForm.bedsMin} onChange={handleFormChange}>
+                  <option value="0">Any</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="row mb-3 justify-content-center">
+              <label className="col-4 col-lg-5 col-form-label text-nowrap">Bathrooms (min)</label>
+              <div className="col-4 col-lg-7">
+                <select className="form-select" name="bathsMin" value={searchForm.bathsMin} onChange={handleFormChange}>
+                  <option value="0">Any</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+
+            <button className="btn btn-primary">Search!</button>
+          </form>
+
+          {
+            noResults && <p className='errorMessage'>No results found!</p>
+          }
+        </div>
+
+        <div className="col-lg-9 px-0">
+          <Map searchCache={searchCache} saveSearchCache={saveSearchCache} formQuery={formQuery} listingType={listingType} />
+        </div>
       </div>
-
-      <div className="mapContainer">
-        <Map searchCache={searchCache} saveSearchCache={saveSearchCache} formQuery={formQuery} listingType={listingType} />
-      </div>
-
     </div>
 
   )
