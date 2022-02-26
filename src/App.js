@@ -1,7 +1,12 @@
-import './normalize.css'
+// import './normalize.css'
 import './App.css'
 import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import { LinkContainer } from 'react-router-bootstrap';
 
 import Listing from './components/Listing'
 import Favourites from './components/Favourites'
@@ -33,9 +38,18 @@ function App() {
         <header>
           <h1>Propertify</h1>
           <nav>
-            <Link to="/rent">Rent</Link>
-            <Link to="/buy">Buy</Link>
-            <Link to="/favourites">Favourites</Link>
+            <ButtonToolbar className="nav-toolbar">
+              <LinkContainer to="/rent">
+                <Button>Rent</Button>
+              </LinkContainer>
+              <LinkContainer to="/buy">
+                <Button>Buy</Button>
+              </LinkContainer>  
+              <LinkContainer to="/favourites">
+                <Button>Favourites</Button>
+              </LinkContainer>            
+            </ButtonToolbar>
+            
           </nav>
         </header>
         
