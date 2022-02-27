@@ -39,9 +39,7 @@ export default function Listing(props) {
   let faveButton
   if (faves.filter(listing => listing.id == params.id).length > 0) {
     faveButton = (
-      <div className="faveButton" onClick={() => removeFave(result)}>
-        ❤️ Remove from favourites
-      </div>
+      <Button onClick={() => removeFave(result)}>💔 Remove from favourites</Button>
     )
   } else {
     faveButton = (
@@ -70,7 +68,7 @@ export default function Listing(props) {
                 <Row className="align-items-center">
                   <Col xs={1} className="px-0"><Button variant="outline-secondary" onClick={handleLeftButtonClick}>&lt;</Button></Col>
                   <Col className="px-0">
-                    <Image fluid src={media[mediaIndex].url} />
+                    <Image fluid src={media[mediaIndex].url} style={{maxHeight: "75vh"}} />
                   </Col>
                   <Col xs={1} className="px-0"><Button variant="outline-secondary" onClick={handleRightButtonClick}>&gt;</Button></Col>
                 </Row>
@@ -78,7 +76,7 @@ export default function Listing(props) {
 
 
               {/* Description */}
-              <Col xl={5}>
+              <Col xl={5} className="pe-4">
                 <h3>{addressParts.displayAddress}</h3>
                 <a href={seoUrl}>View on Domain</a>
                 <p>{propertyTypes[0]} &mdash; {priceDetails.displayPrice}</p>
@@ -87,8 +85,8 @@ export default function Listing(props) {
                   <li className="list-inline-item px-1">🛁 {bathrooms}</li>
                   <li className="list-inline-item px-1">🚘 {carspaces}</li>
                 </ul>
-                  <h3>{headline}</h3>
-                  <p className="text-start">{description}</p>
+                <h3>{headline}</h3>
+                {description.map((line, index) => <p className="text-start" key={index}>{line}</p>)}
               </Col>
             </Row>
           </>

@@ -107,6 +107,10 @@ function useListingResult(id, listingCache, saveListingToCache) {
       })
         .then(res => {
           console.log('Domain Listing Response:', res)
+
+          // Format description line breaks
+          res.data.description = res.data.description.split('\r\n')
+
           setResults(res.data)
           saveListingToCache(res.data)
           setIsLoaded(true)
