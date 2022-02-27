@@ -73,7 +73,7 @@ export default function Search(props) {
 
 
   return (
-    <Container fluid className="border">
+    <Container fluid>
 
       <Row>
         <Col lg={3} className="text-center">

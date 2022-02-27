@@ -1,7 +1,11 @@
-import './Listing.css'
 import { useState } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
 
 import { useListingResult } from '../hooks/domainAPI'
 import { useFavourites } from '../hooks/useFavourites'
@@ -41,70 +45,59 @@ export default function Listing(props) {
     )
   } else {
     faveButton = (
-      <div className="faveButton" onClick={() => addFave(result)}>
-        ❤️ Add to favourites
-      </div>
+      <Button onClick={() => addFave(result)}>❤️ Add to favourites</Button>
     )
   }
 
   return (
-    <div>
+
+    <Container fluid>
+      <br />
       {
         isLoaded
           ?
-          <div>
+          <>
+            {/* Back and Fave buttons - TODO: move into image/desc cols for better layout */}
+            <Row className="mb-3">
+              <Col>{searchCache.data && (<Button variant="primary" onClick={history.goBack}>&lt; Back to map</Button>)}</Col>
+              <Col className="text-end">{faveButton}</Col>
+            </Row>
 
-            <div className="backBar">
-              {
-                searchCache.data && (
-                  <div className="backButton" onClick={history.goBack}>
-                    &lt; Back to map
-                  </div>
-                )
-              }
 
-              <div></div>
+            <Row className="text-center">
+              {/* Image and controls */}
+              <Col xl={7}>
+                <Row className="align-items-center">
+                  <Col xs={1} className="px-0"><Button variant="outline-secondary" onClick={handleLeftButtonClick}>&lt;</Button></Col>
+                  <Col className="px-0">
+                    <Image fluid src={media[mediaIndex].url} />
+                  </Col>
+                  <Col xs={1} className="px-0"><Button variant="outline-secondary" onClick={handleRightButtonClick}>&gt;</Button></Col>
+                </Row>
+              </Col>
 
-              {faveButton}
 
-            </div>
-            <div className="listingTopContainer">
-
-              <div className="listingMedia">
-                <div className="mediaContainer">
-                  <div className="mediaScrollButton" onClick={handleLeftButtonClick}>
-                    &lt;
-                  </div>
-                  <div className="media">
-                    <img src={media[mediaIndex].url} />
-                  </div>
-                  <div className="mediaScrollButton" onClick={handleRightButtonClick}>
-                    &gt;
-                  </div>
-                </div>
-              </div>
-
-              <div className="listingInfo">
+              {/* Description */}
+              <Col xl={5}>
                 <h3>{addressParts.displayAddress}</h3>
                 <a href={seoUrl}>View on Domain</a>
                 <p>{propertyTypes[0]} &mdash; {priceDetails.displayPrice}</p>
-                <ul className='bedBathAndCar'>
-                  <li>🛏 {bedrooms}</li>
-                  <li>🛁 {bathrooms}</li>
-                  <li>🚘 {carspaces}</li>
+                <ul className="list-inline fs-4">
+                  <li className="list-inline-item px-1">🛏 {bedrooms}</li>
+                  <li className="list-inline-item px-1">🛁 {bathrooms}</li>
+                  <li className="list-inline-item px-1">🚘 {carspaces}</li>
                 </ul>
-                <div className="description">
                   <h3>{headline}</h3>
-                  <p>{description}</p>
-                </div>
-              </div>
-
-
-            </div>
-          </div>
+                  <p className="text-start">{description}</p>
+              </Col>
+            </Row>
+          </>
           :
-          <p>Loading</p>
+          <p className="text-center">Loading</p>
       }
-    </div>
+    </Container>
+
+
+
   )
 }
