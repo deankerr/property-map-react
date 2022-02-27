@@ -4,8 +4,8 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 export default function Navigation() {
   return (
-    <Container>
-      <Nav fill variant="tabs">
+    <Container fluid>
+      <Nav variant="tabs">
         <Nav.Item>
           <LinkContainer to="/rent"><Nav.Link>Rent</Nav.Link></LinkContainer>
         </Nav.Item>

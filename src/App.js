@@ -32,10 +32,8 @@ function App() {
   return (
 
     <Router>
-      <Container>
         <h1 className="display-3 text-center">Propertify</h1>
         <Navigation />
-      </Container>
 
       <Switch>
         <Route path="/listing/:id">
