@@ -109,7 +109,8 @@ function useListingResult(id, listingCache, saveListingToCache) {
           console.log('Domain Listing Response:', res)
 
           // Format description line breaks
-          res.data.description = res.data.description.split('\r\n')
+          let newDesc = res.data.description.replace(/(?:\r\n|\r|\n)/g, '%%PROPERTIFY-LINE-BREAK%%')
+          res.data.description = newDesc.split('%%PROPERTIFY-LINE-BREAK%%')
 
           setResults(res.data)
           saveListingToCache(res.data)
