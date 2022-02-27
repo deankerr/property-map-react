@@ -3,10 +3,7 @@ import './App.css'
 import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-
+import Container from 'react-bootstrap/Container'
 
 import Navigation from './components/Navigation'
 import Listing from './components/Listing'
@@ -36,41 +33,35 @@ function App() {
 
     <Router>
       <Container>
-
-        <Container>
-          <h1 className="display-3 text-center">Propertify</h1>
-        </Container>
-
+        <h1 className="display-3 text-center">Propertify</h1>
         <Navigation />
-
-        <Switch>
-          <Route path="/listing/:id">
-            <Listing listingCache={listingCache} saveListingToCache={saveListingToCache} searchCache={searchCache} />
-          </Route>
-
-          <Route path="/rent">
-            <Rent searchCache={searchCache} saveSearchCache={saveSearchCache} />
-          </Route>
-
-          <Route path="/buy">
-            <Buy searchCache={searchCache} saveSearchCache={saveSearchCache} />
-          </Route>
-
-          <Route path="/favourites">
-            <Favourites />
-          </Route>
-
-          <Route exact path="/">
-            <p>Select an option above to begin!</p>
-          </Route>
-
-          <Route path="*">
-            <p>Page not found</p>
-          </Route>
-
-        </Switch>
-
       </Container>
+
+      <Switch>
+        <Route path="/listing/:id">
+          <Listing listingCache={listingCache} saveListingToCache={saveListingToCache} searchCache={searchCache} />
+        </Route>
+
+        <Route path="/rent">
+          <Rent searchCache={searchCache} saveSearchCache={saveSearchCache} />
+        </Route>
+
+        <Route path="/buy">
+          <Buy searchCache={searchCache} saveSearchCache={saveSearchCache} />
+        </Route>
+
+        <Route path="/favourites">
+          <Favourites />
+        </Route>
+
+        <Route exact path="/">
+          <p>Select an option above to begin!</p>
+        </Route>
+
+        <Route path="*">
+          <p>Page not found</p>
+        </Route>
+      </Switch>
     </Router>
 
   )

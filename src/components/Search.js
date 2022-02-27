@@ -1,5 +1,11 @@
-import './Search.css'
 import { useState, useEffect } from 'react'
+
+import Container from 'react-bootstrap/Container'
+import Form from 'react-bootstrap/Form'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+import Alert from 'react-bootstrap/Alert'
 
 import Map from './Map'
 
@@ -67,21 +73,20 @@ export default function Search(props) {
 
 
   return (
-    <div className="container-xl">
+    <Container fluid className="border">
 
-      <div className="row">
-        <div className="col-lg-3">
+      <Row>
+        <Col lg={3} className="text-center">
           <h4>Search Properties For {listingType}</h4>
 
-          <form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit}>
 
-            <div className="row mb-3 justify-content-center">
-              <div className="col-6 col-lg-8 px-2">
-                <input className="form-control" type="text" name="suburb" placeholder="Suburb" onChange={handleFormChange} value={searchForm.suburb} />
-              </div>
-
-              <div className="col-4 col-lg-4 px-1">
-                <select className="form-select" name="state" value={searchForm.state} onChange={handleFormChange}>
+            <Form.Group as={Row} className="justify-content-center justify-content-lg-end mb-3">
+              <Col xs={6} lg={"auto"} xl={8} className="ps-2 pe-1">
+                <Form.Control type="text" name="suburb" placeholder="Suburb" onChange={handleFormChange} value={searchForm.suburb} />
+              </Col>
+              <Col xs={4} lg={"auto"} xl={4} className="ps-1">
+                <Form.Select name="state" value={searchForm.state} onChange={handleFormChange}>
                   <option value="ACT">ACT</option>
                   <option value="NSW">NSW</option>
                   <option value="NT">NT</option>
@@ -90,72 +95,78 @@ export default function Search(props) {
                   <option value="TAS">TAS</option>
                   <option value="VIC">VIC</option>
                   <option value="WA">WA</option>
-                </select>
-              </div>
-            </div>
+                </Form.Select>
+              </Col>
+            </Form.Group>
 
-            <div className="row mb-1 justify-content-center">
-              <label className="col-4 col-lg-5 col-form-label text-nowrap">Price (min)</label>
-              <div className="col-4 col-lg-7">
-                <select className="form-select" name="priceMin" value={searchForm.priceMin} onChange={handleFormChange}>
+            <Form.Group as={Row} className="justify-content-center align-items-center mb-1">
+              <Form.Label column xs={4} lg={6}>Price (min)</Form.Label>
+              <Col xs={4} lg={6}>
+                <Form.Select name="priceMin" value={searchForm.priceMin} onChange={handleFormChange}>
                   <option value="0">Any</option>
                   {priceOptions.map(option => option)}
-                </select>
-              </div>
+                </Form.Select>
+              </Col>
+            </Form.Group>
 
-            </div>
-
-            <div className="row mb-3 justify-content-center">
-              <label className="col-4 col-lg-5 col-form-label text-nowrap">Price (max)</label>
-              <div className="col-4 col-lg-7">
-                <select className="form-select" name="priceMax" value={searchForm.priceMax} onChange={handleFormChange}>
+            <Form.Group as={Row} className="justify-content-center align-items-center mb-3">
+              <Form.Label column xs={4} lg={6}>Price (max)</Form.Label>
+              <Col xs={4} lg={6}>
+                <Form.Select name="priceMin" value={searchForm.priceMin} onChange={handleFormChange}>
                   <option value="0">Any</option>
                   {priceOptions.map(option => option)}
-                </select>
-              </div>
-            </div>
+                </Form.Select>
+              </Col>
+            </Form.Group>
 
-            <div className="row mb-1 justify-content-center">
-              <label className="col-4 col-lg-5 col-form-label text-nowrap">Bedrooms (min)</label>
-              <div className="col-4 col-lg-7">
-                <select className="form-select" name="bedsMin" value={searchForm.bedsMin} onChange={handleFormChange}>
+            <Form.Group as={Row} className="justify-content-center align-items-center mb-1">
+              <Form.Label column xs={4} lg={6}>Bedrooms (min)</Form.Label>
+              <Col xs={4} lg={6}>
+                <Form.Select name="bedsMin" value={searchForm.bedsMin} onChange={handleFormChange}>
                   <option value="0">Any</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
-                </select>
-              </div>
-            </div>
+                </Form.Select>
+              </Col>
+            </Form.Group>
 
-            <div className="row mb-3 justify-content-center">
-              <label className="col-4 col-lg-5 col-form-label text-nowrap">Bathrooms (min)</label>
-              <div className="col-4 col-lg-7">
-                <select className="form-select" name="bathsMin" value={searchForm.bathsMin} onChange={handleFormChange}>
+            <Form.Group as={Row} className="justify-content-center align-items-center mb-3">
+              <Form.Label column xs={4} lg={6}>Bathrooms (min)</Form.Label>
+              <Col xs={4} lg={6}>
+                <Form.Select name="bathsMin" value={searchForm.bathsMin} onChange={handleFormChange}>
                   <option value="0">Any</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                   <option value="4">4</option>
                   <option value="5">5</option>
-                </select>
-              </div>
-            </div>
+                </Form.Select>
+              </Col>
+            </Form.Group>
 
-            <button className="btn btn-primary">Search!</button>
-          </form>
+            <Row className="justify-content-center mb-3">
+              <Col xs={4}>
+                <Button varient="primary" type="submit">Search!</Button>
+              </Col>
+            </Row>
+
+          </Form>
 
           {
-            noResults && <p className='errorMessage'>No results found!</p>
+            noResults && <Alert variant="danger">No results found!</Alert>
           }
-        </div>
+        </Col>
 
-        <div className="col-lg-9 px-0">
+        <Col lg={9} className="px-0">
           <Map searchCache={searchCache} saveSearchCache={saveSearchCache} formQuery={formQuery} listingType={listingType} />
-        </div>
-      </div>
-    </div>
+        </Col>
+
+      </Row>
+
+    </Container>
 
   )
 
