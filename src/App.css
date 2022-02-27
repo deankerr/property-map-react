@@ -1,20 +1,26 @@
 .googleMap {
-  display: inline-block;
   height: 81vh;
   width: 100%;
 }
 
 .propertyMapMarker {
-  width: 100px;
-  height: 68px;
   top: -50px;
-  left: -50px;
+  left: -34px;
   position: relative;
-  background-color: rgba(255, 255, 255, .5);
+  transition: transform 500ms, left 500ms;
+  z-index: auto;
+}
+
+.propertyMapMarker:hover {
+ transform: scale(2, 2);
+ left: -68px;
+ z-index: 9999;
+}
+
+.propertyMapMarker img {
+  max-width: 100px;
+  max-height: 68px;
   border: 1px black solid;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .faveCard:hover {

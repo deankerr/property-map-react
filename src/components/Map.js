@@ -6,7 +6,7 @@ import PropertyMapMarker from './PropertyMapMarker'
 
 // Google Maps
 const DEFAULT_CENTER = { lat: -37.8136, lng: 144.9631 }
-const DEFAULT_ZOOM = 15
+const DEFAULT_ZOOM = 16
 
 export default function Map(props) {
 
