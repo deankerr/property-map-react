@@ -6,15 +6,16 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-import { LinkContainer } from 'react-router-bootstrap';
 
+
+import Navigation from './components/Navigation'
 import Listing from './components/Listing'
 import Favourites from './components/Favourites'
 import Buy from './components/Buy'
 import Rent from './components/Rent'
 
 function App() {
-  
+
   const [searchCache, setSearchCache] = useState({})
   function saveSearchCache(data) {
     console.log(`Saving to searchCache`, data)
@@ -35,28 +36,14 @@ function App() {
 
     <Router>
       <div className="App">
-        <header>
-          <h1>Propertify</h1>
-          <nav>
-            <ButtonToolbar className="nav-toolbar">
-              <LinkContainer to="/rent">
-                <Button>Rent</Button>
-              </LinkContainer>
-              <LinkContainer to="/buy">
-                <Button>Buy</Button>
-              </LinkContainer>  
-              <LinkContainer to="/favourites">
-                <Button>Favourites</Button>
-              </LinkContainer>            
-            </ButtonToolbar>
-            
-          </nav>
+
+        <header className='container'>
+          <h1 className="display-3">Propertify</h1>
         </header>
-        
-        <hr />
+
+        <Navigation />
 
         <Switch>
-
           <Route path="/listing/:id">
             <Listing listingCache={listingCache} saveListingToCache={saveListingToCache} searchCache={searchCache} />
           </Route>
@@ -82,7 +69,7 @@ function App() {
           </Route>
 
         </Switch>
-        
+
       </div>
     </Router>
 
