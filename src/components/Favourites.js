@@ -23,14 +23,14 @@ export default function Favourites(props) {
       {
         faves.length
           ?
-          <Row md={6} className="g-4 justify-content-space-around">
+          <Row className="g-4 justify-content-center">
             {
               faves.map(fave => (
-                  <Card style={{ width: '18rem' }} className="mx-3 position-relative px-0">
+                  <Card style={{ width: '18rem' }} className="faveCard mx-3 position-relative px-0">
                     <Card.Img variant="top" src={fave.media[0].url} onClick={() => handleCardClick(fave.id)} />
                     <Card.Body onClick={() => handleCardClick(fave.id)}>
                       <Card.Text>{fave.headline}</Card.Text>
-                      <Button variant="danger" className="mx-1 my-1 position-absolute top-0 end-0 fs-4" onClick={() => removeFave(fave)}>💔</Button>
+                      <Button variant="outline-danger" className="mx-1 my-1 position-absolute top-0 end-0 fs-4" onClick={() => removeFave(fave)}>💔</Button>
                     </Card.Body>
                   </Card>
               ))
