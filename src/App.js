@@ -35,11 +35,11 @@ function App() {
   return (
 
     <Router>
-      <div className="App">
+      <Container>
 
-        <header className='container'>
-          <h1 className="display-3">Propertify</h1>
-        </header>
+        <Container>
+          <h1 className="display-3 text-center">Propertify</h1>
+        </Container>
 
         <Navigation />
 
@@ -70,7 +70,7 @@ function App() {
 
         </Switch>
 
-      </div>
+      </Container>
     </Router>
 
   )
