@@ -53,11 +53,11 @@ function App() {
         </Route>
 
         <Route exact path="/">
-          <p>Select an option above to begin!</p>
+          <h4 className="text-center">Select an option above to begin!</h4>
         </Route>
 
         <Route path="*">
-          <p>Page not found</p>
+          <h4 className="text-center">Page not found</h4>
         </Route>
       </Switch>
     </Router>
