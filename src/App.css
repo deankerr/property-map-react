@@ -13,13 +13,13 @@
 
 .propertyMapMarker:hover {
  transform: scale(2, 2);
- left: -68px;
+ left: -80px;
  z-index: 9999;
 }
 
 .propertyMapMarker img {
-  max-width: 100px;
-  max-height: 68px;
+  max-width: 120px;
+  max-height: 80px;
   border: 1px black solid;
 }
 
