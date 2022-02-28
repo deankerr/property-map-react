@@ -112,7 +112,7 @@ export default function Search(props) {
             <Form.Group as={Row} className="justify-content-center align-items-center mb-3">
               <Form.Label column xs={4} lg={6}>Price (max)</Form.Label>
               <Col xs={4} lg={6}>
-                <Form.Select name="priceMin" value={searchForm.priceMin} onChange={handleFormChange}>
+                <Form.Select name="priceMax" value={searchForm.priceMax} onChange={handleFormChange}>
                   <option value="0">Any</option>
                   {priceOptions.map(option => option)}
                 </Form.Select>
