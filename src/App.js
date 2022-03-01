@@ -1,9 +1,7 @@
 // import './normalize.css'
 import './App.css'
 import { useState } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-
-import Container from 'react-bootstrap/Container'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Navigation from './components/Navigation'
 import Listing from './components/Listing'
@@ -12,13 +10,11 @@ import Buy from './components/Buy'
 import Rent from './components/Rent'
 
 function App() {
-
   const [searchCache, setSearchCache] = useState({})
   function saveSearchCache(data) {
     console.log(`Saving to searchCache`, data)
     setSearchCache(data)
   }
-
 
   const [listingCache, setListingCache] = useState([])
 
@@ -30,10 +26,9 @@ function App() {
   }
 
   return (
-
     <Router>
-        <h1 className="display-3 text-center">Propertify</h1>
-        <Navigation />
+      <h1 className="display-3 text-center">Propertify</h1>
+      <Navigation />
 
       <Switch>
         <Route path="/listing/:id">
@@ -61,9 +56,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-
   )
-
 }
 
-export default App;
+export default App

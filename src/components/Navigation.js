@@ -7,13 +7,19 @@ export default function Navigation() {
     <Container fluid>
       <Nav variant="tabs" className="mb-2">
         <Nav.Item>
-          <LinkContainer to="/rent"><Nav.Link>Rent</Nav.Link></LinkContainer>
+          <LinkContainer to="/rent">
+            <Nav.Link>Rent</Nav.Link>
+          </LinkContainer>
         </Nav.Item>
         <Nav.Item>
-          <LinkContainer to="/buy"><Nav.Link>Buy</Nav.Link></LinkContainer>
+          <LinkContainer to="/buy">
+            <Nav.Link>Buy</Nav.Link>
+          </LinkContainer>
         </Nav.Item>
         <Nav.Item>
-          <LinkContainer to="/favourites"><Nav.Link>Favourites</Nav.Link></LinkContainer>
+          <LinkContainer to="/favourites">
+            <Nav.Link>Favourites</Nav.Link>
+          </LinkContainer>
         </Nav.Item>
       </Nav>
     </Container>

@@ -7,11 +7,11 @@ function getStorageValue() {
 }
 
 function useFavourites() {
-  const [ faves, setFaves ] = useState(getStorageValue())
+  const [faves, setFaves] = useState(getStorageValue())
 
   useEffect(() => {
     localStorage.setItem('faves', JSON.stringify(faves))
-    console.log('faves:', faves);
+    console.log('faves:', faves)
   }, [faves])
 
   function addFave(item) {
@@ -19,8 +19,8 @@ function useFavourites() {
   }
 
   function removeFave(item) {
-    console.log(item);
-    const newFaves = faves.filter(items => items.id != item.id)
+    console.log(item)
+    const newFaves = faves.filter((items) => items.id != item.id)
     setFaves(newFaves)
   }
 

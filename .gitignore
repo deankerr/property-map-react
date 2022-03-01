@@ -70,3 +70,6 @@ log/
 
 .byebug_history
 .eslintcache
+
+# Editor
+.vscode

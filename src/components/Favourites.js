@@ -16,31 +16,30 @@ export default function Favourites(props) {
     history.push(`/listing/${id}`)
   }
 
-
   return (
     <Container className="text-center justify-content-center">
       <h3>Favourites</h3>
-      {
-        faves.length
-          ?
-          <Row className="g-4 justify-content-center">
-            {
-              faves.map(fave => (
-                  <Card style={{ width: '18rem' }} className="faveCard mx-3 position-relative px-0">
-                    <Card.Img variant="top" src={fave.media[0].url} onClick={() => handleCardClick(fave.id)} />
-                    <Card.Body onClick={() => handleCardClick(fave.id)}>
-                      <Card.Text>{fave.headline}</Card.Text>
-                      <Button variant="outline-danger" className="mx-1 my-1 position-absolute top-0 end-0 fs-4" onClick={() => removeFave(fave)}>💔</Button>
-                    </Card.Body>
-                  </Card>
-              ))
-            }
-          </Row>
-          :
-          <p>Add some favourites first!</p>
-      }
-
+      {faves.length ? (
+        <Row className="g-4 justify-content-center">
+          {faves.map((fave) => (
+            <Card style={{ width: '18rem' }} className="faveCard mx-3 position-relative px-0">
+              <Card.Img variant="top" src={fave.media[0].url} onClick={() => handleCardClick(fave.id)} />
+              <Card.Body onClick={() => handleCardClick(fave.id)}>
+                <Card.Text>{fave.headline}</Card.Text>
+                <Button
+                  variant="outline-danger"
+                  className="mx-1 my-1 position-absolute top-0 end-0 fs-4"
+                  onClick={() => removeFave(fave)}
+                >
+                  💔
+                </Button>
+              </Card.Body>
+            </Card>
+          ))}
+        </Row>
+      ) : (
+        <p>Add some favourites first!</p>
+      )}
     </Container>
-
   )
 }

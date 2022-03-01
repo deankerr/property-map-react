@@ -19,7 +19,7 @@ export default function Search(props) {
     priceMax: '0',
     bedsMin: '0',
     bathsMin: '0',
-    listingType
+    listingType,
   }
 
   const [searchForm, setSearchForm] = useState(DEFAULT_FORM_VALUES)
@@ -27,16 +27,15 @@ export default function Search(props) {
   function handleFormChange(ev) {
     setSearchForm({
       ...searchForm,
-      [ev.target.name]: ev.target.value
+      [ev.target.name]: ev.target.value,
     })
   }
-
 
   const [formQuery, setFormQuery] = useState({})
 
   useEffect(() => {
     if (searchCache.formQuery && searchCache.formQuery.listingType === listingType) {
-      console.log('setting query');
+      console.log('setting query')
       setSearchForm(searchCache.formQuery)
       setFormQuery(searchCache.formQuery)
     } else {
@@ -47,21 +46,39 @@ export default function Search(props) {
 
   function handleSubmit(ev) {
     setFormQuery(searchForm)
-    console.log('submit', searchForm);
+    console.log('submit', searchForm)
     ev.preventDefault()
   }
-
 
   // Generate Price select options
   let priceOptions = []
   if (listingType === 'Rent') {
-    for (let i = 100; i <= 2000; i = i + 100) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
-    for (let i = 3000; i <= 5000; i = i + 1000) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
+    for (let i = 100; i <= 2000; i = i + 100)
+      priceOptions.push(
+        <option value={i} key={i}>
+          {'$' + i.toLocaleString('en-US')}
+        </option>
+      )
+    for (let i = 3000; i <= 5000; i = i + 1000)
+      priceOptions.push(
+        <option value={i} key={i}>
+          {'$' + i.toLocaleString('en-US')}
+        </option>
+      )
   } else {
-    for (let i = 50000; i <= 1000000; i = i + 50000) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
-    for (let i = 1500000; i <= 5000000; i = i + 500000) priceOptions.push(<option value={i} key={i}>{'$' + i.toLocaleString("en-US")}</option>)
+    for (let i = 50000; i <= 1000000; i = i + 50000)
+      priceOptions.push(
+        <option value={i} key={i}>
+          {'$' + i.toLocaleString('en-US')}
+        </option>
+      )
+    for (let i = 1500000; i <= 5000000; i = i + 500000)
+      priceOptions.push(
+        <option value={i} key={i}>
+          {'$' + i.toLocaleString('en-US')}
+        </option>
+      )
   }
-
 
   const [noResults, setNoResults] = useState(false)
 
@@ -70,22 +87,24 @@ export default function Search(props) {
     else setNoResults(false)
   }, [searchCache])
 
-
-
   return (
     <Container fluid>
-
       <Row>
         <Col lg={3} className="text-center">
           <h4>Search Properties For {listingType}</h4>
 
           <Form onSubmit={handleSubmit}>
-
             <Form.Group as={Row} className="justify-content-center justify-content-lg-end mb-3">
-              <Col xs={6} lg={"auto"} xl={8} className="ps-2 pe-1">
-                <Form.Control type="text" name="suburb" placeholder="Suburb" onChange={handleFormChange} value={searchForm.suburb} />
+              <Col xs={6} lg={'auto'} xl={8} className="ps-2 pe-1">
+                <Form.Control
+                  type="text"
+                  name="suburb"
+                  placeholder="Suburb"
+                  onChange={handleFormChange}
+                  value={searchForm.suburb}
+                />
               </Col>
-              <Col xs={4} lg={"auto"} xl={4} className="ps-1">
+              <Col xs={4} lg={'auto'} xl={4} className="ps-1">
                 <Form.Select name="state" value={searchForm.state} onChange={handleFormChange}>
                   <option value="ACT">ACT</option>
                   <option value="NSW">NSW</option>
@@ -100,27 +119,33 @@ export default function Search(props) {
             </Form.Group>
 
             <Form.Group as={Row} className="justify-content-center align-items-center mb-1">
-              <Form.Label column xs={4} lg={6}>Price (min)</Form.Label>
+              <Form.Label column xs={4} lg={6}>
+                Price (min)
+              </Form.Label>
               <Col xs={4} lg={6}>
                 <Form.Select name="priceMin" value={searchForm.priceMin} onChange={handleFormChange}>
                   <option value="0">Any</option>
-                  {priceOptions.map(option => option)}
+                  {priceOptions.map((option) => option)}
                 </Form.Select>
               </Col>
             </Form.Group>
 
             <Form.Group as={Row} className="justify-content-center align-items-center mb-3">
-              <Form.Label column xs={4} lg={6}>Price (max)</Form.Label>
+              <Form.Label column xs={4} lg={6}>
+                Price (max)
+              </Form.Label>
               <Col xs={4} lg={6}>
                 <Form.Select name="priceMax" value={searchForm.priceMax} onChange={handleFormChange}>
                   <option value="0">Any</option>
-                  {priceOptions.map(option => option)}
+                  {priceOptions.map((option) => option)}
                 </Form.Select>
               </Col>
             </Form.Group>
 
             <Form.Group as={Row} className="justify-content-center align-items-center mb-1">
-              <Form.Label column xs={4} lg={6}>Bedrooms (min)</Form.Label>
+              <Form.Label column xs={4} lg={6}>
+                Bedrooms (min)
+              </Form.Label>
               <Col xs={4} lg={6}>
                 <Form.Select name="bedsMin" value={searchForm.bedsMin} onChange={handleFormChange}>
                   <option value="0">Any</option>
@@ -134,7 +159,9 @@ export default function Search(props) {
             </Form.Group>
 
             <Form.Group as={Row} className="justify-content-center align-items-center mb-3">
-              <Form.Label column xs={4} lg={6}>Bathrooms (min)</Form.Label>
+              <Form.Label column xs={4} lg={6}>
+                Bathrooms (min)
+              </Form.Label>
               <Col xs={4} lg={6}>
                 <Form.Select name="bathsMin" value={searchForm.bathsMin} onChange={handleFormChange}>
                   <option value="0">Any</option>
@@ -149,25 +176,25 @@ export default function Search(props) {
 
             <Row className="justify-content-center mb-3">
               <Col xs={4}>
-                <Button varient="primary" type="submit">Search!</Button>
+                <Button variant="primary" type="submit">
+                  Search!
+                </Button>
               </Col>
             </Row>
-
           </Form>
 
-          {
-            noResults && <Alert variant="danger">No results found!</Alert>
-          }
+          {noResults && <Alert variant="danger">No results found!</Alert>}
         </Col>
 
         <Col lg={9} className="px-0">
-          <Map searchCache={searchCache} saveSearchCache={saveSearchCache} formQuery={formQuery} listingType={listingType} />
+          <Map
+            searchCache={searchCache}
+            saveSearchCache={saveSearchCache}
+            formQuery={formQuery}
+            listingType={listingType}
+          />
         </Col>
-
       </Row>
-
     </Container>
-
   )
-
 }
