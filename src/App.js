@@ -1,5 +1,6 @@
 import './App.css'
 // import { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Container, Row, Col } from 'react-bootstrap'
 
@@ -10,18 +11,38 @@ import Navigation from './components/Navigation'
 
 export default function App() {
   return (
-    <Container fluid>
-      <Row>
-        <Col lg={4} className="justify-content-center">
-          <h1 className="text-center">Propertify</h1>
-          <Navigation />
-        </Col>
+    <Router>
+      <Container fluid>
+        <Row>
+          <Col lg={4} className="justify-content-center">
+            <h1 className="text-center">Propertify</h1>
+            <Navigation />
 
-        <Col lg={8} className="px-0">
-          <Map />
-        </Col>
-      </Row>
-    </Container>
+            <Switch>
+              <Route path="/listing/:id"></Route>
+
+              <Route path="/rent"></Route>
+
+              <Route path="/buy"></Route>
+
+              <Route path="/favourites"></Route>
+
+              <Route exact path="/">
+                <h6 className="text-center">Select an option above to begin!</h6>
+              </Route>
+
+              <Route path="*">
+                <h6 className="text-center">Page not found</h6>
+              </Route>
+            </Switch>
+          </Col>
+
+          <Col lg={8} className="px-0">
+            <Map />
+          </Col>
+        </Row>
+      </Container>
+    </Router>
   )
 }
 
