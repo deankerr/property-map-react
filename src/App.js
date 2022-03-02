@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 
 import Map from './components/Map'
 import Navigation from './components/Navigation'
+import SearchForm from './components/SearchForm'
 // import Listing from './components/Listing'
 // import Favourites from './components/Favourites'
 
@@ -21,9 +22,13 @@ export default function App() {
             <Switch>
               <Route path="/listing/:id"></Route>
 
-              <Route path="/rent"></Route>
+              <Route path="/rent">
+                <SearchForm listingType="Rent" />
+              </Route>
 
-              <Route path="/buy"></Route>
+              <Route path="/buy">
+                <SearchForm listingType="Sale" />
+              </Route>
 
               <Route path="/favourites"></Route>
 
