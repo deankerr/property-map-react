@@ -6,7 +6,7 @@ import GoogleMapReact from 'google-map-react'
 
 // Google Maps
 const DEFAULT_CENTER = { lat: -37.8136, lng: 144.9631 }
-const DEFAULT_ZOOM = 16
+const DEFAULT_ZOOM = 13
 
 // TODO: Use defaultCenter/Zoom, investigate fitBounds for displayed markers https://github.com/google-map-react/google-map-react/blob/master/API.md
 
