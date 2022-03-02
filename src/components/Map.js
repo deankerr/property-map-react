@@ -8,7 +8,11 @@ import GoogleMapReact from 'google-map-react'
 const DEFAULT_CENTER = { lat: -37.8136, lng: 144.9631 }
 const DEFAULT_ZOOM = 16
 
+// TODO: Use defaultCenter/Zoom, investigate fitBounds for displayed markers https://github.com/google-map-react/google-map-react/blob/master/API.md
+
 export default function Map(props) {
+  const { listings = [] } = props
+
   return (
     <div className="googleMap">
       <GoogleMapReact
@@ -16,7 +20,7 @@ export default function Map(props) {
         center={DEFAULT_CENTER}
         zoom={DEFAULT_ZOOM}
       >
-        <p>Map</p>
+        {listings.map((listing) => listing)}
       </GoogleMapReact>
     </div>
   )
