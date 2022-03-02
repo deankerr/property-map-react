@@ -15,7 +15,7 @@ export default function App() {
       <Container fluid>
         <Row>
           <Col lg={4} className="justify-content-center">
-            <h1 className="text-center">Propertify</h1>
+            <h1 className="text-center mt-4">Propertify</h1>
             <Navigation />
 
             <Switch>
@@ -37,7 +37,7 @@ export default function App() {
             </Switch>
           </Col>
 
-          <Col lg={8} className="px-0">
+          <Col lg={8} className="mapContainer shadow-lg px-0" style={{ height: '100vh' }}>
             <Map />
           </Col>
         </Row>

@@ -14,15 +14,13 @@ export default function Map(props) {
   const { listings = [] } = props
 
   return (
-    <div className="googleMap">
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
-        center={DEFAULT_CENTER}
-        zoom={DEFAULT_ZOOM}
-      >
-        {listings.map((listing) => listing)}
-      </GoogleMapReact>
-    </div>
+    <GoogleMapReact
+      bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }}
+      center={DEFAULT_CENTER}
+      zoom={DEFAULT_ZOOM}
+    >
+      {listings.map((listing) => listing)}
+    </GoogleMapReact>
   )
 }
 
