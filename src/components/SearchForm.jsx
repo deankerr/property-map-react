@@ -33,7 +33,8 @@ export default function SearchForm(props) {
   function handleSubmit(event) {
     event.preventDefault()
     const query = getParamString(activeFormState)
-    history.push(`/${listingType}/${query}`)
+    const prefix = listingType === 'sale' ? 'buy' : 'rent'
+    history.push(`/${prefix}/${query}`)
   }
 
   return (
