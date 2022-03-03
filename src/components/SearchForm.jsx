@@ -186,13 +186,13 @@ function generatePriceOptions(listingType) {
   ]
 
   switch (listingType) {
-    case 'Buy':
+    case 'sale':
       for (let i = 50000; i <= 1000000; i = i + 50000) options.push(formatPrice(i))
       for (let i = 1500000; i <= 5000000; i = i + 500000) options.push(formatPrice(i))
       break
 
     default:
-    case 'Rent':
+    case 'rent':
       for (let i = 100; i <= 2000; i = i + 100) options.push(formatPrice(i))
       for (let i = 3000; i <= 5000; i = i + 1000) options.push(formatPrice(i))
       break

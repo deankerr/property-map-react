@@ -9,7 +9,7 @@ import { createMemoryHistory } from 'history'
 const fakeHistory = createMemoryHistory()
 
 it('renders generated price list', () => {
-  render(<SearchForm listingType="Buy" />)
+  render(<SearchForm listingType="sale" />)
   expect(screen.getAllByRole('option', { name: '$1,000,000' })).toHaveLength(2)
 })
 
