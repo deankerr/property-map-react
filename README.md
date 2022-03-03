@@ -16,4 +16,3 @@ You can click on the previews to be taken to an information page, where you can 
 - react-router-bootstrap
 - axios
 - google-map-react
-- Jest
