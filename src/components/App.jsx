@@ -7,6 +7,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Map from './Map'
 import Navigation from './Navigation'
 import SearchForm from './SearchForm'
+import SearchResults from './SearchResults'
 // import Listing from './components/Listing'
 // import Favourites from './components/Favourites'
 
@@ -40,6 +41,14 @@ export default function App() {
                 <h6 className="text-center">Page not found</h6>
               </Route>
             </Switch>
+
+            <Route path="/rent/:suburb/:state/:priceMin/:priceMax/:bedsMin/:bathsMin">
+              <SearchResults />
+            </Route>
+
+            <Route path="/buy/:suburb/:state/:priceMin/:priceMax/:bedsMin/:bathsMin">
+              <SearchResults />
+            </Route>
           </Col>
 
           <Col lg={8} className="mapContainer shadow-lg px-0" style={{ height: '100vh' }}>

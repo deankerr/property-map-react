@@ -1,28 +1,45 @@
 import { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 
-// * test data
 const DEFAULT_FORM = {
   suburb: 'Brunswick',
   state: 'VIC',
+  priceMin: '0',
+  priceMax: '0',
+  bedsMin: '0',
+  bathsMin: '0',
 }
 
 export default function SearchForm(props) {
   const { listingType } = props
 
-  const [searchForm, setSearchForm] = useState(DEFAULT_FORM)
+  // ? Can I make this extensible to allow more listTypes without hardcoding state (using computed property names?)
+  // const [searchForm, setSearchForm] = useState({ [listingType]: DEFAULT_FORM })
+  const [rentSearchForm, setRentSearchForm] = useState(DEFAULT_FORM)
+  const [saleSearchForm, setSaleSearchForm] = useState(DEFAULT_FORM)
 
-  function handleFormChange(ev) {
-    setSearchForm({
-      ...searchForm,
-      [ev.target.name]: ev.target.value,
-    })
-    console.log(searchForm)
+  const activeFormState = (listingType === 'Rent' && rentSearchForm) || (listingType === 'Sale' && saleSearchForm)
+  const setActiveFormState =
+    (listingType === 'Rent' && setRentSearchForm) || (listingType === 'Sale' && setSaleSearchForm)
+
+  function handleFormChange(event) {
+    setActiveFormState({ ...activeFormState, [event.target.name]: event.target.value })
   }
 
-  // TODO: Handle submit
-  function handleSubmit() {
-    console.log('Form submit')
+  const history = useHistory()
+  function handleSubmit(event) {
+    event.preventDefault()
+
+    console.log('Form submit:', listingType, activeFormState)
+
+    // Reduce form object properties to '/' delemitered string of values
+    const query = Object.entries(activeFormState).reduce(
+      (prev, [key, value], index) => `${prev}` + (index > 0 ? '/' : '') + `${value}`,
+      ''
+    )
+    const current = listingType === 'Rent' ? '/rent' : '/buy'
+    history.push(`${current}/${query}`)
   }
 
   return (
@@ -34,19 +51,28 @@ export default function SearchForm(props) {
           <Form onSubmit={handleSubmit}>
             <Form.Group as={Row} className="justify-content-center justify-content-lg-end mb-3">
               <Col xs={6} lg={12} xl={8} className="mb-lg-2">
-                <Form.Label htmlFor="suburb" visuallyHidden />
+                <Form.Label htmlFor="suburb" visuallyHidden>
+                  Suburb
+                </Form.Label>
                 <Form.Control
                   type="text"
                   name="suburb"
                   placeholder="Suburb"
                   id="suburb"
                   onChange={handleFormChange}
-                  value={searchForm.suburb}
+                  value={activeFormState.suburb}
                 />
               </Col>
               <Col xs={4} lg="auto" xl={4}>
-                <Form.Label htmlFor="state-territory" visuallyHidden />
-                <Form.Select name="state" value={searchForm.state} id="state-territory" onChange={handleFormChange}>
+                <Form.Label htmlFor="state-territory" visuallyHidden>
+                  State/Territory
+                </Form.Label>
+                <Form.Select
+                  name="state"
+                  value={activeFormState.state}
+                  id="state-territory"
+                  onChange={handleFormChange}
+                >
                   <option value="ACT">ACT</option>
                   <option value="NSW">NSW</option>
                   <option value="NT">NT</option>
@@ -64,7 +90,12 @@ export default function SearchForm(props) {
                 Price (min)
               </Form.Label>
               <Col xs={4} lg={6}>
-                <Form.Select name="priceMin" value={searchForm.priceMin} id="price-min" onChange={handleFormChange}>
+                <Form.Select
+                  name="priceMin"
+                  value={activeFormState.priceMin}
+                  id="price-min"
+                  onChange={handleFormChange}
+                >
                   {generatePriceOptions(listingType).map((price) => price)}
                 </Form.Select>
               </Col>
@@ -75,7 +106,12 @@ export default function SearchForm(props) {
                 Price (max)
               </Form.Label>
               <Col xs={4} lg={6}>
-                <Form.Select name="priceMax" value={searchForm.priceMax} id="price-max" onChange={handleFormChange}>
+                <Form.Select
+                  name="priceMax"
+                  value={activeFormState.priceMax}
+                  id="price-max"
+                  onChange={handleFormChange}
+                >
                   {generatePriceOptions(listingType).map((price) => price)}
                 </Form.Select>
               </Col>
@@ -86,7 +122,12 @@ export default function SearchForm(props) {
                 Bedrooms (min)
               </Form.Label>
               <Col xs={4} lg={6}>
-                <Form.Select name="bedsMin" value={searchForm.bedsMin} id="bedrooms-min" onChange={handleFormChange}>
+                <Form.Select
+                  name="bedsMin"
+                  value={activeFormState.bedsMin}
+                  id="bedrooms-min"
+                  onChange={handleFormChange}
+                >
                   <option value="0">Any</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -102,7 +143,12 @@ export default function SearchForm(props) {
                 Bathrooms (min)
               </Form.Label>
               <Col xs={4} lg={6}>
-                <Form.Select name="bathsMin" value={searchForm.bathsMin} id="bathrooms-min" onChange={handleFormChange}>
+                <Form.Select
+                  name="bathsMin"
+                  value={activeFormState.bathsMin}
+                  id="bathrooms-min"
+                  onChange={handleFormChange}
+                >
                   <option value="0">Any</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -140,7 +186,7 @@ function generatePriceOptions(listingType) {
   }
 
   let options = [
-    <option value="0" key="any">
+    <option value="0" key="any" defaultValue>
       Any
     </option>,
   ]
