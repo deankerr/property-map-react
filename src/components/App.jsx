@@ -24,11 +24,11 @@ export default function App() {
               <Route path="/listing/:id"></Route>
 
               <Route path="/rent">
-                <SearchForm listingType="Rent" />
+                <SearchForm listingType="rent" />
               </Route>
 
               <Route path="/buy">
-                <SearchForm listingType="Sale" />
+                <SearchForm listingType="sale" />
               </Route>
 
               <Route path="/favourites"></Route>

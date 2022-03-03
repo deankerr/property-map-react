@@ -19,9 +19,9 @@ export default function SearchForm(props) {
   const [rentSearchForm, setRentSearchForm] = useState(DEFAULT_FORM)
   const [saleSearchForm, setSaleSearchForm] = useState(DEFAULT_FORM)
 
-  const activeFormState = (listingType === 'Rent' && rentSearchForm) || (listingType === 'Sale' && saleSearchForm)
+  const activeFormState = (listingType === 'rent' && rentSearchForm) || (listingType === 'sale' && saleSearchForm)
   const setActiveFormState =
-    (listingType === 'Rent' && setRentSearchForm) || (listingType === 'Sale' && setSaleSearchForm)
+    (listingType === 'rent' && setRentSearchForm) || (listingType === 'sale' && setSaleSearchForm)
 
   function handleFormChange(event) {
     setActiveFormState({ ...activeFormState, [event.target.name]: event.target.value })
@@ -38,15 +38,15 @@ export default function SearchForm(props) {
       (prev, [key, value], index) => `${prev}` + (index > 0 ? '/' : '') + `${value}`,
       ''
     )
-    const current = listingType === 'Rent' ? '/rent' : '/buy'
-    history.push(`${current}/${query}`)
+
+    history.push(`/${listingType}/${query}`)
   }
 
   return (
     <Container>
       <Row className="justify-content-center">
         <Col xxl={10} className="text-center justify-content-center">
-          <h4>Search Properties For {listingType}</h4>
+          <h4>Search Properties for {listingType.replace(/^\w/, (c) => c.toUpperCase())}</h4>
           {/* // TODO: Replace suburb/state inputs with searchable component */}
           <Form onSubmit={handleSubmit}>
             <Form.Group as={Row} className="justify-content-center justify-content-lg-end mb-3">

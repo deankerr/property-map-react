@@ -16,7 +16,7 @@ it('renders generated price list', () => {
 it('pushes a search route with values from form', () => {
   render(
     <Router history={fakeHistory}>
-      <SearchForm listingType="Rent" />
+      <SearchForm listingType="rent" />
     </Router>
   )
 
