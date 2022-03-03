@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Container, Row, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 import Map from './Map'
 import Navigation from './Navigation'
@@ -19,7 +20,9 @@ export default function App() {
       <Container fluid>
         <Row>
           <Col lg={4} className="justify-content-center">
-            <h1 className="text-center mt-4">Propertify</h1>
+            <a href="/" style={{ color: '#000', textDecoration: 'none' }}>
+              <h1 className="text-center mt-4 display-4">Propertify</h1>
+            </a>
             <Navigation />
 
             <Switch>

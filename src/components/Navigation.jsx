@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 export default function Navigation() {
   return (
     <Container fluid>
-      <Nav variant="tabs mb-3">
+      <Nav variant="tabs" className="mb-3">
         <Nav.Item>
           <LinkContainer to="/rent">
             <Nav.Link>Rent</Nav.Link>
