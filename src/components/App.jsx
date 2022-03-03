@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Container, Row, Col } from 'react-bootstrap'
 
-import Map from './components/Map'
-import Navigation from './components/Navigation'
-import SearchForm from './components/SearchForm'
+import Map from './Map'
+import Navigation from './Navigation'
+import SearchForm from './SearchForm'
 // import Listing from './components/Listing'
 // import Favourites from './components/Favourites'
 
