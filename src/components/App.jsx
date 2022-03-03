@@ -1,5 +1,5 @@
 import './App.css'
-// import { useState } from 'react'
+import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Container, Row, Col } from 'react-bootstrap'
@@ -12,6 +12,8 @@ import SearchResults from './SearchResults'
 // import Favourites from './components/Favourites'
 
 export default function App() {
+  const [resultsCache, setResultsCache] = useState(null)
+
   return (
     <Router>
       <Container fluid>
@@ -43,11 +45,11 @@ export default function App() {
             </Switch>
 
             <Route path="/rent/:suburb/:state/:priceMin/:priceMax/:bedsMin/:bathsMin">
-              <SearchResults />
+              <SearchResults listingType="rent" cache={resultsCache} setCache={setResultsCache} />
             </Route>
 
             <Route path="/buy/:suburb/:state/:priceMin/:priceMax/:bedsMin/:bathsMin">
-              <SearchResults />
+              <SearchResults listingType="sale" cache={resultsCache} setCache={setResultsCache} />
             </Route>
           </Col>
 
