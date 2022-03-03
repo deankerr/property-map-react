@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 
+import { getParamString } from '../utils/utils'
+
 const DEFAULT_FORM = {
   suburb: 'Brunswick',
   state: 'VIC',
@@ -30,15 +32,7 @@ export default function SearchForm(props) {
   const history = useHistory()
   function handleSubmit(event) {
     event.preventDefault()
-
-    console.log('Form submit:', listingType, activeFormState)
-
-    // Reduce form object properties to '/' delemitered string of values
-    const query = Object.entries(activeFormState).reduce(
-      (prev, [key, value], index) => `${prev}` + (index > 0 ? '/' : '') + `${value}`,
-      ''
-    )
-
+    const query = getParamString(activeFormState)
     history.push(`/${listingType}/${query}`)
   }
 
