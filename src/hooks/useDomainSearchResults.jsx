@@ -14,7 +14,7 @@ function useDomainSearchResults(query, cache, setCache) {
   useEffect(() => {
     setIsLoaded(false)
 
-    if (cache != null && cache.queryKey === queryKey) {
+    if (cache.queryKey === queryKey) {
       setIsLoaded(true)
       console.log('Using cache', cache)
       return
@@ -50,8 +50,7 @@ function useDomainSearchResults(query, cache, setCache) {
         // TODO: support "Project" listings
         const listings = response.data.filter((res) => res.type === 'PropertyListing')
         const results = { queryKey, listings }
-        setResults(listings)
-        setCache(results)
+        setResults(results)
         setIsLoaded(true)
       })
       .catch((err) => {

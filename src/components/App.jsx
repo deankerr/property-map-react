@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Container, Row, Col } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 
 import Map from './Map'
 import Navigation from './Navigation'
@@ -13,7 +12,7 @@ import SearchResults from './SearchResults'
 // import Favourites from './components/Favourites'
 
 export default function App() {
-  const [resultsCache, setResultsCache] = useState(null)
+  const [resultsCache, setResultsCache] = useState({})
 
   return (
     <Router>
@@ -57,7 +56,7 @@ export default function App() {
           </Col>
 
           <Col lg={8} className="mapContainer shadow-lg px-0" style={{ height: '100vh' }}>
-            <Map />
+            <Map results={resultsCache} />
           </Col>
         </Row>
       </Container>
