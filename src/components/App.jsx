@@ -56,7 +56,7 @@ export default function App() {
           </Col>
 
           <Col lg={8} className="mapContainer shadow-lg px-0" style={{ height: '100vh' }}>
-            <Map results={resultsCache} />
+            <Map listings={resultsCache.listings} />
           </Col>
         </Row>
       </Container>

@@ -51,6 +51,7 @@ function useDomainSearchResults(query, cache, setCache) {
         const listings = response.data.filter((res) => res.type === 'PropertyListing')
         const results = { queryKey, listings }
         setResults(results)
+        setCache(results)
         setIsLoaded(true)
       })
       .catch((err) => {
