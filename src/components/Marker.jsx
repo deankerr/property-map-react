@@ -1,8 +1,8 @@
 const markerWidth = '100'
 
 const imageBoxHeight = 67
-const imageBoxRadius = '8%'
 const imageBoxMargin = 4
+const imageBoxBorderRadius = '10%'
 const imageBoxBorderColor = '#333'
 const imageBoxBorderSize = '3px'
 
@@ -34,8 +34,8 @@ export default function Marker(props) {
           style={{
             border: `${imageBoxBorderColor} solid ${imageBoxBorderSize}`,
             width: '100%',
-            height: `${imageBoxHeight}`,
-            borderRadius: { imageBoxRadius },
+            height: `${imageBoxHeight}px`,
+            borderRadius: `${imageBoxBorderRadius}`,
             overflow: 'hidden',
             marginBottom: `${imageBoxMargin}px`,
             boxSizing: 'border-box',
