@@ -29,21 +29,24 @@ export default function Map(props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [listings.length])
 
-  // ! testing - one listing only
-  // if (listings.length > 0) listings = [listings[0]]
+  let markers = listings.map((listing) => (
+    <Marker
+      lat={listing.listing.propertyDetails.latitude}
+      lng={listing.listing.propertyDetails.longitude}
+      headline={listing.listing.headline}
+      image={listing.listing.media[0].url}
+      id={listing.listing.id}
+      domURL={`https://domain.com.au/${listing.listing.listingSlug}`}
+      key={listing.listing.id}
+    />
+  ))
+
+  // ! testing - one marker only
+  // markers = markers[0]
 
   return (
     <GoogleMapReact bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_API_KEY }} center={center} zoom={zoom}>
-      {listings.map((listing) => (
-        <Marker
-          lat={listing.listing.propertyDetails.latitude}
-          lng={listing.listing.propertyDetails.longitude}
-          headline={listing.listing.headline}
-          image={listing.listing.media[0].url}
-          id={listing.listing.id}
-          key={listing.listing.id}
-        />
-      ))}
+      {markers}
     </GoogleMapReact>
   )
 }
