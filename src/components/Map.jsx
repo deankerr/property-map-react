@@ -27,7 +27,7 @@ export default function Map(props) {
       setZoom(15)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [listings.length])
+  }, [listings.length]) // ! BUG: not an accurate method to know when markers changed
 
   let markers = listings.map((listing) => (
     <Marker
@@ -36,7 +36,10 @@ export default function Map(props) {
       headline={listing.listing.headline}
       image={listing.listing.media[0].url}
       id={listing.listing.id}
-      domURL={`https://domain.com.au/${listing.listing.listingSlug}`}
+      domainURL={`https://domain.com.au/${listing.listing.listingSlug}`}
+      bedrooms={listing.listing.propertyDetails.bedrooms}
+      bathrooms={listing.listing.propertyDetails.bathrooms}
+      carSpaces={listing.listing.propertyDetails.carspaces}
       key={listing.listing.id}
     />
   ))
