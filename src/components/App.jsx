@@ -35,7 +35,7 @@ export default function App() {
                 <SearchForm listingType="sale" />
               </Route>
 
-              <Route path="/favourites"></Route>
+              {/* <Route path="/favourites"></Route> */}
 
               <Route exact path="/">
                 <h6 className="text-center">Select an option above to begin!</h6>

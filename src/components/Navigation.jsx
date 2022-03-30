@@ -16,11 +16,11 @@ export default function Navigation() {
             <Nav.Link>Buy</Nav.Link>
           </LinkContainer>
         </Nav.Item>
-        <Nav.Item>
+        {/* <Nav.Item>
           <LinkContainer to="/favourites">
             <Nav.Link>Favourites</Nav.Link>
           </LinkContainer>
-        </Nav.Item>
+        </Nav.Item> */}
       </Nav>
     </Container>
   )
