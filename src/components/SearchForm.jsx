@@ -45,7 +45,7 @@ export default function SearchForm(props) {
           {/* // TODO: Replace suburb/state inputs with searchable component */}
           <Form onSubmit={handleSubmit}>
             <Form.Group as={Row} className="justify-content-center justify-content-lg-end mb-3">
-              <Col xs={6} lg={12} xl={8} className="mb-lg-2">
+              <Col xs={6} lg={12} xl={7} className="mb-lg-2">
                 <Form.Label htmlFor="suburb" visuallyHidden>
                   Suburb
                 </Form.Label>
@@ -58,7 +58,7 @@ export default function SearchForm(props) {
                   value={activeFormState.suburb}
                 />
               </Col>
-              <Col xs={4} lg="auto" xl={4}>
+              <Col xs={4} lg="auto" xl={5}>
                 <Form.Label htmlFor="state-territory" visuallyHidden>
                   State/Territory
                 </Form.Label>
