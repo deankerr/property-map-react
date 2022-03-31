@@ -20,8 +20,8 @@ export default function MarkerPopup(props) {
       <div className="content">
         <h5>{headline}</h5>
         <Carousel interval="2000" controls={false} style={{ height: '180px' }}>
-          {media.map((image) => (
-            <CarouselItem className="h-180" style={{ height: '180px' }}>
+          {media.map((image, index) => (
+            <CarouselItem className="h-180" style={{ height: '180px' }} key={index}>
               <img src={`${image.url}/500x500`} alt="" />
             </CarouselItem>
           ))}
