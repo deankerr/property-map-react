@@ -316,6 +316,6 @@ const fakeListings = [
 // ! if this randomly starts failing the test listing images may have disappeared?
 it('renders Marker props in the map div', () => {
   render(<Map listings={fakeListings} />)
-  const searchMarkers = screen.getAllByAltText(/listing marker/i)
+  const searchMarkers = screen.getAllByTestId('marker')
   expect(searchMarkers).toHaveLength(3)
 })

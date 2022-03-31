@@ -24,7 +24,7 @@ export default function Marker(props) {
   const { media, domainURL, headline, bedrooms, bathrooms, carSpaces, price } = props
   return (
     <div className="marker">
-      <MapPin onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={handleClick} />
+      <MapPin onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={handleClick} data-testid="marker" />
       <MarkerPopup
         visible={showPopup}
         mouseOver={handleMouseOver}
