@@ -5,7 +5,7 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { getParamString } from '../utils/utils'
 
 const DEFAULT_FORM = {
-  suburb: 'Brunswick',
+  suburb: '',
   state: 'VIC',
   priceMin: '0',
   priceMax: '0',
@@ -30,6 +30,7 @@ export default function SearchForm(props) {
   }
 
   const history = useHistory()
+
   function handleSubmit(event) {
     event.preventDefault()
     const query = getParamString(activeFormState)
