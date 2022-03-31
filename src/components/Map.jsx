@@ -34,12 +34,13 @@ export default function Map(props) {
       lat={listing.listing.propertyDetails.latitude}
       lng={listing.listing.propertyDetails.longitude}
       headline={listing.listing.headline}
-      image={listing.listing.media[0].url}
+      media={listing.listing.media}
       id={listing.listing.id}
       domainURL={`https://domain.com.au/${listing.listing.listingSlug}`}
       bedrooms={listing.listing.propertyDetails.bedrooms}
       bathrooms={listing.listing.propertyDetails.bathrooms}
       carSpaces={listing.listing.propertyDetails.carspaces}
+      price={listing.listing.priceDetails.displayPrice}
       key={listing.listing.id}
     />
   ))

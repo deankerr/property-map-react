@@ -2,10 +2,10 @@
   --marker-width: 40px; /* from Marker.css */
   --marker-height: 56px;
 
-  --popup-width: 260px;
+  --popup-width: 280px;
   --popup-height: 320px;
 
-  --popup-content-height: 280px;
+  --popup-content-height: 340px;
 
   --arrow-size: 24px;
 
@@ -41,10 +41,11 @@
   background-color: var(--bg-color);
 
   text-align: center;
-  padding: 10px 6px;
+  padding: 10px 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 101;
 }
 
 .content img {
