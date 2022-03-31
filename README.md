@@ -1,6 +1,6 @@
 # Propertify
 
-[Live version](https://dk-property-map.herokuapp.com/)
+[Live version](https://deankerr.github.io/property-map-react/)
 
 A React front-end for exploring residential listing data from Domain.com.au spatially with Google Maps.
 

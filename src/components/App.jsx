@@ -13,7 +13,7 @@ export default function App() {
   const [resultsCache, setResultsCache] = useState({})
 
   return (
-    <Router>
+    <Router basename="/property-map-react">
       <Container fluid>
         <Row>
           <Col xl={3} lg={4} className="justify-content-center text-center">
