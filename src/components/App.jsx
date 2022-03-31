@@ -18,7 +18,7 @@ export default function App() {
     <Router>
       <Container fluid>
         <Row>
-          <Col lg={4} className="justify-content-center text-center">
+          <Col lg={3} className="justify-content-center text-center">
             <a href="/" style={{ color: '#000', textDecoration: 'none' }}>
               <h1 className="text-center mt-4 display-4">Propertify</h1>
             </a>
@@ -55,7 +55,7 @@ export default function App() {
             </Route>
           </Col>
 
-          <Col lg={8} className="mapContainer shadow-lg px-0" style={{ height: '100vh' }}>
+          <Col lg={9} className="mapContainer shadow-lg px-0" style={{ height: '100vh' }}>
             <Map listings={resultsCache.listings} />
           </Col>
         </Row>
