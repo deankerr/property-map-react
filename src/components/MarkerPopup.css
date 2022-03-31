@@ -3,7 +3,9 @@
   --marker-height: 56px;
 
   --popup-width: 260px;
-  --popup-height: 280px;
+  --popup-height: 320px;
+
+  --popup-content-height: 280px;
 
   --arrow-size: 24px;
 
@@ -11,11 +13,11 @@
 
   width: var(--popup-width);
   height: var(--popup-height);
-  margin: auto;
   position: absolute;
-  top: calc((var(--popup-height) + var(--arrow-size) / 1.5) * -1);
+  top: calc((var(--popup-content-height) + var(--arrow-size) / 1.5) * -1);
   left: calc(var(--popup-width) / -2 + var(--marker-width) / 2);
   z-index: 100;
+  /* border: 1px blue dotted; */
 }
 
 .arrow {
@@ -27,13 +29,13 @@
   border-right: 2px solid black;
 
   position: absolute;
-  top: calc(var(--arrow-size) / -2 + var(--popup-height));
+  top: calc(var(--arrow-size) / -2 + var(--popup-content-height));
   left: calc(var(--popup-width) / 2 - var(--arrow-size) / 2);
 }
 
 .content {
   width: 100%;
-  height: 100%;
+  height: var(--popup-content-height);
   border: 2px solid black;
   border-radius: 8%;
   background-color: var(--bg-color);
