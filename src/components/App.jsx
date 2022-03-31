@@ -8,8 +8,6 @@ import Map from './Map'
 import Navigation from './Navigation'
 import SearchForm from './SearchForm'
 import SearchResults from './SearchResults'
-// import Listing from './components/Listing'
-// import Favourites from './components/Favourites'
 
 export default function App() {
   const [resultsCache, setResultsCache] = useState({})
@@ -34,8 +32,6 @@ export default function App() {
               <Route path="/buy">
                 <SearchForm listingType="sale" />
               </Route>
-
-              {/* <Route path="/favourites"></Route> */}
 
               <Route exact path="/">
                 <h6 className="text-center">Select an option above to begin!</h6>
@@ -63,22 +59,3 @@ export default function App() {
     </Router>
   )
 }
-
-//   const [searchCache, setSearchCache] = useState({})
-//   function saveSearchCache(data) {
-//     console.log(`Saving to searchCache`, data)
-//     setSearchCache(data)
-//   }
-
-//   const [listingCache, setListingCache] = useState([])
-
-//   function saveListingToCache(data) {
-//     console.log(`Saving to listingCache id: ${data.id}`)
-//     const newCache = [...listingCache, data]
-//     console.log(`New cache is:`, newCache)
-//     setListingCache(newCache)
-//   }
-
-//   return (
-
-//   )
