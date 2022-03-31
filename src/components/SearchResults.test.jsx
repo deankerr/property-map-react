@@ -14,7 +14,7 @@ const fakeSetCache = jest.fn((data) => (fakeCacheState = data))
 jest.mock('../hooks/useDomainSearchResults', () => {
   return {
     useDomainSearchResults: (query) => {
-      return { results: ['small house', 'big house', 'shoebox'], isLoaded: true, error: null }
+      return { results: { listings: ['small house', 'big house', 'shoebox'] }, isLoaded: true, error: null }
     },
   }
 })

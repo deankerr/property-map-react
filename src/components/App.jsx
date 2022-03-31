@@ -18,7 +18,7 @@ export default function App() {
     <Router>
       <Container fluid>
         <Row>
-          <Col lg={4} className="justify-content-center">
+          <Col lg={4} className="justify-content-center text-center">
             <a href="/" style={{ color: '#000', textDecoration: 'none' }}>
               <h1 className="text-center mt-4 display-4">Propertify</h1>
             </a>

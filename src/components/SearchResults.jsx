@@ -20,7 +20,7 @@ export default function SearchResults(props) {
       {error && <p>Error: {error.message}</p>}
       {isLoaded ? (
         <p>
-          Found {results.length} results for {listingType}
+          Found {results.listings.length} results for {listingType}
         </p>
       ) : (
         <p>Loading...</p>
